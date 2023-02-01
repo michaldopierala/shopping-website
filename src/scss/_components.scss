@@ -1,0 +1,35 @@
+.StoreItem{
+
+
+    &:hover img{
+        cursor: pointer;
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+    }
+
+    img{
+        width: 100%;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: .2s ease-in-out;
+        transition: .2s ease-in-out;
+
+      
+    }
+
+    .product_name{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 22px;
+
+        .price{
+            font-size: 20px;
+            color: rgb(60, 60, 60);
+        }
+    }
+
+button{
+    padding: 10px;
+}
+}
