@@ -14,8 +14,6 @@ export default function Product() {
             <div> {product.name}</div>
             <img style={{width:"50%"}} src={product.imgUrl[0]} alt="product image"/>
             <div> Price: $ {product.price}</div>
-
-
         </div>
     )
 }

@@ -7,7 +7,7 @@ export default function Store() {
   return (
     <div className='Store'>
 
-      {products.map((item) => <StoreItem {...item} />)}
+      {products.map((item) => <StoreItem key={item.id} {...item} />)}
 
     </div>
   )
