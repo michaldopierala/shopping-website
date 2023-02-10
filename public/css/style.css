@@ -8,7 +8,6 @@ button {
   background-color: #00C9A7;
   border: none;
   border-radius: 7px;
-  background: blueviolet;
   color: white;
 }
 button:hover {
@@ -53,17 +52,18 @@ input {
   padding: 10px;
   background-color: black;
 }
-.StoreItem .changeQuantity {
-  display: flex;
-  justify-content: center;
-}
 .StoreItem .changeQuantity .addProduct {
   width: 90%;
+}
+.StoreItem .changeQuantity > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .StoreItem .changeQuantity .showQuantity {
   display: flex;
   justify-content: center;
-  justify-items: center;
+  align-items: center;
   font-size: 20px;
 }
 .StoreItem .changeQuantity .showQuantity button {
@@ -73,8 +73,16 @@ input {
   padding: 0;
   margin: 5px 10px;
 }
+.StoreItem .changeQuantity .showQuantity .inCart {
+  text-align: center;
+  width: 70px;
+}
+.StoreItem .changeQuantity .showQuantity .inCart span {
+  font-size: 14px;
+}
 .StoreItem .changeQuantity .remove {
   text-align: center;
+  margin: 0 auto;
 }
 
 body {
@@ -84,6 +92,7 @@ body {
 }
 
 .Navbar {
+  z-index: 100;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -118,18 +127,23 @@ body {
   width: 100%;
 }
 .Navbar .cartIcon .cartCount {
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  background-color: red;
   position: absolute;
   top: -15px;
-  right: -10px;
-  padding: 5px;
+  right: -12px;
   color: white;
+  background-color: red;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
 }
-.Navbar .cartIcon .cartCount span {
-  display: block;
+.Navbar .mobileMenu {
+  display: none;
+}
+
+.Home {
+  padding-top: 200px;
 }
 
 .ShoppingCart {
@@ -180,8 +194,8 @@ body {
 }
 .ShoppingCart .tab .CartItem {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  align-content: space-between;
   font-size: 20px;
   margin-top: 20px;
 }
@@ -205,7 +219,6 @@ body {
   clear: all;
   padding: 0;
   margin: 0;
-  outline: green solid 1px;
   float: right;
 }
 .ShoppingCart .tab .CartItem .right span {
@@ -244,12 +257,78 @@ body {
 }
 
 .Product {
-  padding-top: 200px;
+  padding-top: 130px;
+  z-index: 0;
+}
+.Product > div {
+  float: left;
+}
+.Product::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.Product .sliderContainer {
+  width: 55%;
+  position: relative;
+}
+.Product .sliderContainer .slider {
+  float: right;
+  width: 70%;
+}
+.Product .sliderContainer .slider img {
+  width: 100%;
+}
+.Product .sliderContainer .react-multi-carousel-dot {
+  padding-bottom: 40px;
+}
+.Product .sliderContainer .react-multi-carousel-dot button {
+  padding: 7px;
+  background: rgba(255, 255, 255, 0.2);
+  border: solid rgba(128, 128, 128, 0.5) 4px;
+}
+.Product .sliderContainer .react-multi-carousel-dot--active button {
+  background: rgba(8, 8, 8, 0.4);
+  border: solid rgba(8, 8, 8, 0.1) 4px;
+}
+.Product .sliderContainer .react-multiple-carousel__arrow {
+  z-index: 0;
+}
+.Product .sliderContainer .ButtonGroup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Product .sliderContainer .ButtonGroup button {
+  background-color: white;
+  width: 50%;
+  margin: 2%;
+  margin-bottom: 20%;
+  padding: 0;
+  overflow: hidden;
+}
+.Product .sliderContainer .ButtonGroup button img {
+  width: 100%;
+}
+.Product .sliderContainer .ButtonGroup .active {
+  padding: 0;
+  border: black solid 2px;
+}
+.Product .description {
+  text-align: center;
+  width: 43%;
+  background-color: gold;
 }
 
 .Footer {
   background-color: black;
   color: white;
+  margin-top: 200px;
   height: 200px;
   display: grid;
   place-items: center;
@@ -257,7 +336,69 @@ body {
 }
 
 @media only screen and (max-width: 650px) {
-  body {
-    background-color: lightblue;
+  .Navbar .btn {
+    display: none;
+  }
+  .Navbar .mobileMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    clear: all;
+    background-color: white;
+  }
+  .Navbar .mobileMenu:hover {
+    cursor: pointer;
+    background-color: white;
+  }
+  .Navbar .mobileMenu img {
+    width: 30px;
+    padding: 0;
+  }
+  .MobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: mobile 0.5s 1;
+  }
+  @keyframes mobile {
+    from {
+      left: -400px;
+    }
+    to {
+      left: 0;
+    }
+  }
+  .MobileMenu .close_menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    clear: all;
+    background-color: black;
+  }
+  .MobileMenu .close_menu:hover {
+    cursor: pointer;
+  }
+  .MobileMenu .close_menu img {
+    width: 45px;
+  }
+  .MobileMenu .tab {
+    padding-top: 100px;
+    background-color: black;
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .MobileMenu .tab .link {
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    padding: 15px 65px;
   }
 }

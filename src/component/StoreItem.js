@@ -26,13 +26,13 @@ export default function StoreItem({ id, name, price, imgUrl }) {
                     <div>
                         <div className='showQuantity'>
                             <button onClick={() => decreaseCartQuantity(id)}>-</button>
-                            {itemQuantity} in cart
+                            <span className='inCart'>  {itemQuantity} <span >in cart</span></span>
                             <button onClick={() => increaseCartQuantity(id)}>+</button>
                         </div>
-                        <button className='remove' onClick={()=>remove(id)}> Remove</button>
+                        <button className='remove' onClick={() => remove(id)}> Remove</button>
                     </div>
 
-            }
+                }
 
             </div>
         </div>

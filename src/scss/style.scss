@@ -26,7 +26,10 @@ body {
 
 
 
+
+
 .Navbar {
+    z-index: 100;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -36,7 +39,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    // background-color: $third-color;
     background-color: white;
     box-shadow: 0px 0px 10px -1px gray;
     z-index: 2;
@@ -67,27 +69,28 @@ body {
         }
 
         .cartCount {
-            // display: block;
-            height: 12px;
-            width: 12px;
-            border-radius: 50%;
-            background-color: red;
-
             position: absolute;
             top: -15px;
-            right: -10px;
-            padding: 5px;
+            right: -12px;
             color: white;
+            background-color: red;
+            height: 23px;
+            width: 23px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
 
-            span {
-                // text-align: center;
-                display: block;
-
-            }
         }
     }
 
+    .mobileMenu {
+        display: none;
+    }
 
+}
+
+.Home {
+    padding-top: 200px;
 }
 
 .ShoppingCart {
@@ -148,12 +151,10 @@ body {
 
         .CartItem {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            align-content: space-between;
             font-size: 20px;
             margin-top: 20px;
-
-            // outline: red solid 1px;
 
 
             .left {
@@ -179,27 +180,12 @@ body {
                 clear: all;
                 padding: 0;
                 margin: 0;
-                outline: green solid 1px;
                 float: right;
-                // display: flex;
-                // justify-content: center;
-                // align-items: center;
 
                 span {
                     text-decoration: none;
                     clear: all;
-                    // padding-top: 2px;
                     line-height: -4px;
-                    // padding: 0;
-                    // margin: 0;
-                    // padding: 0;
-                    // height: 160px;
-
-
-                    // display: flex;
-                    // justify-content: center;
-                    // align-items: center;
-
                 }
 
                 button {
@@ -253,14 +239,97 @@ body {
 
 
 .Product {
-    padding-top: 200px;
+    padding-top: 130px;
+    z-index: 0;
 
+    &>div {
+        float: left;
+    }
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .sliderContainer {
+        width: 55%;
+        position: relative;
+
+        .slider {
+            float: right;
+            width: 70%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .react-multi-carousel-dot {
+            padding-bottom: 40px;
+
+            button {
+                padding: 7px;
+                background: rgba(white, 0.2);
+                border: solid rgba(grey, 0.5) 4px;
+            }
+        }
+
+        .react-multi-carousel-dot--active button {
+            background: rgba(#080808, 0.4);
+            border: solid rgba(#080808, 0.1) 4px;
+
+        }
+
+        .react-multiple-carousel__arrow {
+            z-index: 0;
+        }
+
+        .ButtonGroup {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                background-color: white;
+                width: 50%;
+                margin: 2%;
+                margin-bottom: 20%;
+                padding: 0;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                }
+
+            }
+
+            .active {
+                padding: 0;
+                border: black solid 2px;
+            }
+
+        }
+
+    }
+
+    .description {
+        text-align: center;
+        width: 43%;
+        background-color: gold;
+    }
 }
 
 
 .Footer {
     background-color: black;
     color: white;
+    margin-top: 200px;
     height: 200px;
     display: grid;
     // justify-content: center;

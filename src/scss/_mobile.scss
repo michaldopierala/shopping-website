@@ -1,5 +1,93 @@
 @media only screen and (max-width: 650px) {
-    body {
-      background-color: lightblue;
+  
+
+
+  .Navbar {
+
+    .btn {
+      display: none;
+    }
+
+
+    .mobileMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      clear: all;
+      background-color: white;
+
+      &:hover {
+        cursor: pointer;
+        background-color: white;
+      }
+
+      img {
+        width: 30px;
+        padding: 0;
+      }
     }
   }
+
+
+  .MobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(black, 0.5);
+
+    animation: mobile 0.5s 1;
+
+    @keyframes mobile {
+        from {
+          left: -400px;
+        }
+
+        to {
+          left: 0;
+        }
+    }
+
+
+    .close_menu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      clear: all;
+      background-color: black;
+
+      &:hover {
+        cursor: pointer;
+        // background-color: white;
+      }
+
+      img {
+        width: 45px;
+      }
+    }
+
+    .tab {
+      padding-top: 100px;
+      background-color: black;
+      width: 70vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+
+
+
+
+      .link {
+        text-decoration: none;
+        color: white;
+        font-size: 23px;
+        padding: 15px 65px;
+      }
+    }
+  }
+
+}

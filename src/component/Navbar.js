@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from "react-router-dom";
 import { ShoppingCartContext } from '../context/CartContext';
+import MobileMenu from './MobileMenu';
 
 
 export default function Navbar() {
@@ -9,6 +10,7 @@ export default function Navbar() {
     return (
         <div className="Navbar" >
             <nav>
+                <MobileMenu/>
                 <Link className="btn" to="/">Home </Link>
                 <Link className="btn" to="store">Store</Link>
                 <Link className="btn" to="about">About</Link>

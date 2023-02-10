@@ -5,8 +5,9 @@ import products from '../data/products.json'
 export default function Home() {
 
     return (
-        <div>
-            {/* {products.map((item) => <StoreItem {...item}/>  )} */}
+        <div className='Home'>
+            {products.map((item) => <StoreItem {...item}/>  )}
+
         </div>
 
 
