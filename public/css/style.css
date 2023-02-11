@@ -88,7 +88,7 @@ input {
 body {
   margin: 0;
   padding: 0;
-  font-family: fantasy;
+  font-family: cursive;
 }
 
 .Navbar {
@@ -258,18 +258,10 @@ body {
 
 .Product {
   padding-top: 130px;
-  z-index: 0;
-}
-.Product > div {
-  float: left;
-}
-.Product::after {
-  content: "";
-  display: table;
-  clear: both;
+  display: grid;
+  grid-template-columns: 55% 1fr;
 }
 .Product .sliderContainer {
-  width: 55%;
   position: relative;
 }
 .Product .sliderContainer .slider {
@@ -279,50 +271,106 @@ body {
 .Product .sliderContainer .slider img {
   width: 100%;
 }
+.Product .sliderContainer .slider .counter {
+  display: none;
+}
 .Product .sliderContainer .react-multi-carousel-dot {
   padding-bottom: 40px;
 }
 .Product .sliderContainer .react-multi-carousel-dot button {
   padding: 7px;
   background: rgba(255, 255, 255, 0.2);
-  border: solid rgba(128, 128, 128, 0.5) 4px;
+  border: solid rgba(104, 103, 103, 0.2) 2px;
 }
 .Product .sliderContainer .react-multi-carousel-dot--active button {
-  background: rgba(8, 8, 8, 0.4);
-  border: solid rgba(8, 8, 8, 0.1) 4px;
+  background: rgba(255, 255, 255, 0.5);
+  border: solid rgba(255, 255, 255, 0.2) 2px;
 }
 .Product .sliderContainer .react-multiple-carousel__arrow {
   z-index: 0;
 }
 .Product .sliderContainer .ButtonGroup {
+  width: 30%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 30%;
+}
+.Product .sliderContainer .ButtonGroup .imgSelector {
+  margin: 0 auto;
+  width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.Product .sliderContainer .ButtonGroup button {
+.Product .sliderContainer .ButtonGroup .imgSelector button {
   background-color: white;
-  width: 50%;
-  margin: 2%;
-  margin-bottom: 20%;
-  padding: 0;
-  overflow: hidden;
+  margin-bottom: 18%;
 }
-.Product .sliderContainer .ButtonGroup button img {
-  width: 100%;
-}
-.Product .sliderContainer .ButtonGroup .active {
-  padding: 0;
-  border: black solid 2px;
+.Product .sliderContainer .ButtonGroup .imgSelector .active img {
+  box-shadow: 0px 0px 12px black;
 }
 .Product .description {
+  padding: 40px 60px;
+}
+.Product .description .name {
+  font-size: 35px;
+}
+.Product .description .price {
+  font-size: 20px;
+  font-weight: 900;
+  border-bottom: gray solid 1px;
+  padding-bottom: 20px;
+}
+.Product .description .addToCart {
   text-align: center;
-  width: 43%;
-  background-color: gold;
+}
+.Product .description .addToCart button {
+  margin-top: 30px;
+  background-color: black;
+  padding: 10px 30px;
+  font-size: 17px;
+}
+.Product .description .textDescription {
+  margin-top: 50px;
+}
+.Product .description .textDescription .title {
+  display: inline-block;
+  border-bottom: black solid 2px;
+  font-size: 19px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.Product .description .textDescription .text {
+  margin-top: 20px;
+}
+.Product .description .inCart {
+  margin-top: 40px;
+  text-align: center;
+}
+.Product .description .inCart button {
+  background-color: black;
+}
+.Product .description .inCart .addToCart {
+  padding: 10px 30px;
+}
+.Product .description .inCart .changeQuantity button {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 5px 5px;
+}
+.Product .description .inCart .changeQuantity .quantity {
+  font-size: 25px;
+}
+.Product .description .inCart .remove {
+  padding: 10px 30px;
+  margin: 10px 5px;
+}
+
+.About {
+  padding-top: 200px;
 }
 
 .Footer {
@@ -335,7 +383,7 @@ body {
   font-size: 40px;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 600px) {
   .Navbar .btn {
     display: none;
   }
@@ -400,5 +448,38 @@ body {
     color: white;
     font-size: 23px;
     padding: 15px 65px;
+  }
+  .Product {
+    display: block;
+  }
+  .Product .sliderContainer .slider {
+    position: relative;
+    float: none;
+    margin: 0 auto;
+  }
+  .Product .sliderContainer .slider .counter {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: rgba(120, 120, 120, 0.6);
+    border-radius: 25px;
+    padding: 5px 15px;
+    color: white;
+    letter-spacing: 1.9px;
+  }
+  .Product .sliderContainer .ButtonGroup {
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+  .Product .sliderContainer .ButtonGroup .imgSelector {
+    display: none;
+  }
+  .Product .sliderContainer .ButtonGroup .imgSelector .counter {
+    display: block;
+  }
+  .Product .description {
+    padding: 40px 16%;
   }
 }

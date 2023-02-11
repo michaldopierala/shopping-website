@@ -1,5 +1,5 @@
-@media only screen and (max-width: 650px) {
-  
+@media only screen and (max-width: 600px) {
+
 
 
   .Navbar {
@@ -42,13 +42,13 @@
     animation: mobile 0.5s 1;
 
     @keyframes mobile {
-        from {
-          left: -400px;
-        }
+      from {
+        left: -400px;
+      }
 
-        to {
-          left: 0;
-        }
+      to {
+        left: 0;
+      }
     }
 
 
@@ -89,5 +89,61 @@
       }
     }
   }
+
+
+
+
+
+  .Product {
+    display: block;
+    // grid-template-columns: 100%;
+
+    .sliderContainer {
+
+      .slider {
+
+        position: relative;
+        float: none;
+        margin: 0 auto;
+
+        .counter {
+          
+          display: block;
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          background-color: rgba(120,120,120, 0.6);
+          border-radius: 25px;
+          padding: 5px 15px;
+          color: white;
+          letter-spacing: 1.9px;
+
+        }
+
+      }
+
+      .ButtonGroup {
+        top: 0;
+        right: 0;
+        width: 100%;
+
+        .imgSelector {
+          display: none;
+          // position: static;
+
+          .counter {
+            display: block;
+          }
+        }
+      }
+
+    }
+
+    .description {
+      padding: 40px 16%;
+    }
+  }
+
+
 
 }

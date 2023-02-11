@@ -13,12 +13,12 @@ export default function Slider({id, name, imgUrl}) {
             slidesToSlide: 1 // optional, default to 1.
         },
         tablet: {
-            breakpoint: { max: 1024, min: 464 },
+            breakpoint: { max: 1024, min: 600 },
             items: 1,
             slidesToSlide: 1 // optional, default to 1.
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
+            breakpoint: { max: 600, min: 0 },
             items: 1,
             slidesToSlide: 1 // optional, default to 1.
         }
@@ -59,6 +59,7 @@ export default function Slider({id, name, imgUrl}) {
                 <div className='test'>Item 2 </div>
                 <div className='test'>Item 3 </div>
                 <div className='test'>Item 4 </div> */}
+
             </Carousel>
 
         // </div>

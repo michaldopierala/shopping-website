@@ -14,22 +14,26 @@ import products from '../../data/products.json'
 // }
 
 
-export default function ButtonGroup( { img, next, previous, goToSlide, ...rest }) {
+export default function ButtonGroup({ img, next, previous, goToSlide, ...rest }) {
     // export default function ButtonGroup( props) {
 
-const { carouselState: { currentSlide } } = rest;
+    const { carouselState: { currentSlide } } = rest;
     // console.log(img)
     return (
         <div className='ButtonGroup'>
             {/* {img.map((item, index) => <button key={index} className={currentSlide - 2 === index ? 'active' : ''} onClick={() => goToSlide(index + 2)}><img src={item.imgUrl} alt='image' /> </button>)} */}
-{/* <div>test </div> */}
-{/* <button onClick={() => goToSlide( 2)} > item 1 </button>
+            {/* <div>test </div> */}
+            {/* <button onClick={() => goToSlide( 2)} > item 1 </button>
 <button onClick={() => goToSlide( 2)} > item 2 </button> */}
-            {img.map((item, index) => <button key={index} className={currentSlide - 2 === index ? 'active' : ''} onClick={() => goToSlide(index + 2)}><img src={item} alt='image' /> </button>)}
+            <div className='imgSelector'>
+                {img.map((item, index) => <button key={index} className={currentSlide - 2 === index ? 'active' : ''} onClick={() => goToSlide(index + 2)}><img src={item} alt='image' /> </button>)}
+            </div>
+
+            <div className='counter'>{currentSlide-1}/4 </div>
 
 
 
-            {img.map((item, index) =>  console.log(item))}
+            {/* {img.map((item, index) =>  console.log(item))} */}
 
         </div>
     )

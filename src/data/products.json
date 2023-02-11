@@ -8,7 +8,8 @@
             "../img/product/id1/1.jpeg",
             "../img/product/id1/3.jpeg",
             "../img/product/id1/4.jpeg"
-        ]
+        ],
+        "description": "What is a product description? A product description is the marketing copy that explains what a product is and why it's worth purchasing. The purpose of a product description is to supply customers with important information about the features and key benefits of the product so they're compelled to buy."
     },
     {
         "id": 2,

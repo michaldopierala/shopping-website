@@ -6,8 +6,7 @@ export default function Home() {
 
     return (
         <div className='Home'>
-            {products.map((item) => <StoreItem {...item}/>  )}
-
+fd
         </div>
 
 
