@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { Link } from "react-router-dom";
 
 
-export default function MobileMenu() {
+export default function MobileMenuTab() {
 
 const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -14,7 +14,7 @@ function openMenu(){
 
 
     return (
-        <div className='MobileMenu'>
+        <div className='MobileMenuTab'>
             <button className='close_menu' onClick={openMenu}><img src='./img/close_white.png' alt='close button' /></button>
 
             <div className='tab'>

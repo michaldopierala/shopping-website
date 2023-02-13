@@ -22,7 +22,7 @@ export default function StoreItem({ id, name, price, imgUrl }) {
                 <span className='price'>$ {price}</span>
             </div>
             <div className='changeQuantity'>
-                {itemQuantity === 0 ? <button className='addProduct' onClick={() => increaseCartQuantity(id)} >+ Add Product </button> :
+                {itemQuantity === 0 ?<div className='addProduct'><button  onClick={() => increaseCartQuantity(id)} >+ Add Product </button></div>  :
                     <div>
                         <div className='showQuantity'>
                             <button onClick={() => decreaseCartQuantity(id)}>-</button>
@@ -30,6 +30,7 @@ export default function StoreItem({ id, name, price, imgUrl }) {
                             <button onClick={() => increaseCartQuantity(id)}>+</button>
                         </div>
                         <button className='remove' onClick={() => remove(id)}> Remove</button>
+                        
                     </div>
 
                 }

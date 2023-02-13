@@ -8,18 +8,41 @@
       display: none;
     }
 
+    .logo {
+      width: 130px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .cartIcon {
+      width: 24px;
+      right: 55px;
+
+      .cartCount {
+        top: -12px;
+        right: -11px;
+        font-size: 12px;
+        height: 20px;
+        width: 20px;
+
+      }
+
+    }
 
     .mobileMenu {
       display: block;
       position: absolute;
-      top: 20px;
-      left: 30px;
+      top: 50%;
+      left: 40px;
+      transform: translate(0%, -50%);
+
       clear: all;
-      background-color: white;
+      background-color: transparent;
+      padding: 0;
 
       &:hover {
         cursor: pointer;
-        background-color: white;
       }
 
       img {
@@ -30,7 +53,7 @@
   }
 
 
-  .MobileMenu {
+  .MobileMenuTab {
     position: fixed;
     top: 0;
     left: 0;
@@ -92,6 +115,24 @@
 
 
 
+  .ShoppingCart {
+    // width: auto;
+    // width: 100%;
+    outline: green solid 1px;
+
+
+    .tab {
+      font-size: 25px;
+      // width: 100%;
+
+      .CartItem {
+        font-size: 17px;
+
+      }
+    }
+
+  }
+
 
 
   .Product {
@@ -107,12 +148,12 @@
         margin: 0 auto;
 
         .counter {
-          
+
           display: block;
           position: absolute;
           top: 20px;
           right: 30px;
-          background-color: rgba(120,120,120, 0.6);
+          background-color: rgba(120, 120, 120, 0.6);
           border-radius: 25px;
           padding: 5px 15px;
           color: white;

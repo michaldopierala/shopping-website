@@ -21,7 +21,13 @@ body {
     // font-family: sans-serif;
     // font-family: serif;
     // font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    // font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; 
 
+
+    font-family: "Helvetica Neue W31", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.007em;
 }
 
 
@@ -35,11 +41,11 @@ body {
     left: 0px;
     right: 0px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    height: 80px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #f5f5f5;
     box-shadow: 0px 0px 10px -1px gray;
     z-index: 2;
 
@@ -51,17 +57,31 @@ body {
         font-size: 20px;
         color: black;
 
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+    }
+
+    .logo {
+        position: absolute;
+        top: 7px;
+        left: 50px;
+        width: 200px;
+
     }
 
     .cartIcon {
         all: unset;
-        width: 30px;
+        width: 27px;
         position: absolute;
         top: 22px;
         right: 70px;
 
         &:hover {
             cursor: pointer;
+            text-decoration: underline;
         }
 
         img {
@@ -79,7 +99,8 @@ body {
             border-radius: 50%;
             display: grid;
             place-items: center;
-
+            font-size: 14px;
+            font-weight: 500;
         }
     }
 
@@ -90,18 +111,72 @@ body {
 }
 
 .Home {
-    padding-top: 200px;
+    padding-top: 70px;
+
+    .homeCarusel {
+
+        .react-multi-carousel-dot {
+            padding-bottom: 40px;
+
+            button {
+                padding: 7px;
+                background: rgba(white, 0.2);
+                border: solid rgba(rgb(104, 103, 103), 0.2) 2px;
+            }
+        }
+
+        .react-multi-carousel-dot--active button {
+            background: rgba(white, 0.5);
+            border: solid rgba(white, 0.2) 2px;
+
+        }
+
+        .react-multiple-carousel__arrow {
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            .text {
+                position: absolute;
+                bottom: 20%;
+                left: 10%;
+                color: white;
+                font-size: 50px;
+                text-decoration: none;
+
+            }
+        }
+
+    }
+
+    .ProductsCarusel {
+        outline: black solid 1px;
+        margin: 0 auto;
+        margin-top: 70px;
+        width: 85%;
+
+
+        img {
+            margin: 20px;
+            width: 150px;
+        }
+    }
 }
 
 .ShoppingCart {
+    // to jest main 
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
-    height: 100vh;
     z-index: 2;
     background-color: rgba($primary-color, 50%);
-    width: 100%;
     height: 100vh;
 
     .close_btn {
@@ -121,14 +196,16 @@ body {
     }
 
     .tab {
-        min-width: 400px;
+        // to jest cart 2
         position: absolute;
         top: 0;
         right: 0;
-        height: 100vh;
+        height: 19vh;
         padding: 7px 30px;
         background-color: white;
         font-size: 30px;
+        outline: solid red 4px;
+        width: 80%;
 
 
         animation: wobble 0.5s 1;
@@ -156,14 +233,22 @@ body {
             font-size: 20px;
             margin-top: 20px;
 
-
             .left {
                 display: flex;
                 align-items: center;
-                margin-right: 100px;
+                outline: auto;
 
                 .name {
                     margin-left: 20px;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
 
                     span,
                     .itemPrice {
@@ -177,6 +262,7 @@ body {
             }
 
             .right {
+                outline: auto;
                 clear: all;
                 padding: 0;
                 margin: 0;
@@ -243,24 +329,13 @@ body {
     display: grid;
     grid-template-columns: 55% 1fr;
 
-    &>div {
-        // float: left;
-    }
-
-    // &::after {
-    //     content: "";
-    //     display: table;
-    //     clear: both;
-    // }
 
     .sliderContainer {
-        // width: 55%;
         position: relative;
 
         .slider {
             float: right;
             width: 70%;
-
 
             img {
                 width: 100%;
@@ -400,22 +475,41 @@ body {
                     margin: 5px 5px;
                 }
 
-                .quantity{
+                .quantity {
                     font-size: 25px;
                 }
 
             }
 
-            .remove{
-           
-                    // border-radius: 50%;
-                    padding: 10px 30px;
-                    margin: 10px 5px;
-                    // color: red;
-                
+            .remove {
+
+                // border-radius: 50%;
+                padding: 10px 30px;
+                margin: 10px 5px;
+                // color: red;
+
             }
         }
 
+    }
+
+    .carusel {
+        outline: blue solid 1px;
+        width: 90%;
+
+        img {
+            width: 50px;
+        }
+
+        .ProductsCarusel {
+            outline: black solid 1px;
+            margin: 0 auto;
+            margin-top: 70px;
+            width: 85%;
+
+
+
+        }
     }
 }
 

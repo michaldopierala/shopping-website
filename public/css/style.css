@@ -1,14 +1,16 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 button {
-  background-color: #00C9A7;
+  font-family: "Helvetica Neue W31", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  letter-spacing: 1.1px;
   border: none;
-  border-radius: 7px;
+  border-radius: 5px;
   color: white;
+  font-family: "Helvetica Neue W31", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 5px 25px;
 }
 button:hover {
   cursor: pointer;
@@ -37,7 +39,7 @@ input {
   transform: scale(1.05);
 }
 .StoreItem .product_name {
-  margin-top: 20px;
+  margin: 10px;
   margin-bottom: 10px;
   display: flex;
   flex-direction: row;
@@ -45,20 +47,21 @@ input {
   font-size: 22px;
 }
 .StoreItem .product_name .price {
+  margin: 10px;
   font-size: 20px;
-  color: rgb(80, 80, 80);
+  color: rgb(110, 110, 110);
 }
-.StoreItem button {
-  padding: 10px;
+.StoreItem .changeQuantity button {
   background-color: black;
-}
-.StoreItem .changeQuantity .addProduct {
-  width: 90%;
+  margin: 0px auto;
 }
 .StoreItem .changeQuantity > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.StoreItem .changeQuantity .addProduct {
+  margin-top: 28px;
 }
 .StoreItem .changeQuantity .showQuantity {
   display: flex;
@@ -83,12 +86,17 @@ input {
 .StoreItem .changeQuantity .remove {
   text-align: center;
   margin: 0 auto;
+  margin-top: 20px;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: cursive;
+  font-family: "Helvetica Neue W31", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.007em;
 }
 
 .Navbar {
@@ -98,11 +106,11 @@ body {
   left: 0px;
   right: 0px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  height: 80px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #f5f5f5;
   box-shadow: 0px 0px 10px -1px gray;
   z-index: 2;
 }
@@ -113,15 +121,26 @@ body {
   font-size: 20px;
   color: black;
 }
+.Navbar .btn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.Navbar .logo {
+  position: absolute;
+  top: 7px;
+  left: 50px;
+  width: 200px;
+}
 .Navbar .cartIcon {
   all: unset;
-  width: 30px;
+  width: 27px;
   position: absolute;
   top: 22px;
   right: 70px;
 }
 .Navbar .cartIcon:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 .Navbar .cartIcon img {
   width: 100%;
@@ -137,13 +156,54 @@ body {
   border-radius: 50%;
   display: grid;
   place-items: center;
+  font-size: 14px;
+  font-weight: 500;
 }
 .Navbar .mobileMenu {
   display: none;
 }
 
 .Home {
-  padding-top: 200px;
+  padding-top: 70px;
+}
+.Home .homeCarusel .react-multi-carousel-dot {
+  padding-bottom: 40px;
+}
+.Home .homeCarusel .react-multi-carousel-dot button {
+  padding: 7px;
+  background: rgba(255, 255, 255, 0.2);
+  border: solid rgba(104, 103, 103, 0.2) 2px;
+}
+.Home .homeCarusel .react-multi-carousel-dot--active button {
+  background: rgba(255, 255, 255, 0.5);
+  border: solid rgba(255, 255, 255, 0.2) 2px;
+}
+.Home .homeCarusel .react-multiple-carousel__arrow {
+  z-index: 0;
+}
+.Home .homeCarusel .container {
+  position: relative;
+}
+.Home .homeCarusel .container img {
+  width: 100%;
+}
+.Home .homeCarusel .container .text {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: white;
+  font-size: 50px;
+  text-decoration: none;
+}
+.Home .ProductsCarusel {
+  outline: black solid 1px;
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 85%;
+}
+.Home .ProductsCarusel img {
+  margin: 20px;
+  width: 150px;
 }
 
 .ShoppingCart {
@@ -151,10 +211,8 @@ body {
   top: 0;
   right: 0;
   width: 100%;
-  height: 100vh;
   z-index: 2;
   background-color: rgba(132, 94, 194, 0.5);
-  width: 100%;
   height: 100vh;
 }
 .ShoppingCart .close_btn {
@@ -170,14 +228,15 @@ body {
   width: 50px;
 }
 .ShoppingCart .tab {
-  min-width: 400px;
   position: absolute;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 19vh;
   padding: 7px 30px;
   background-color: white;
   font-size: 30px;
+  outline: solid red 4px;
+  width: 80%;
   animation: wobble 0.5s 1;
 }
 @keyframes wobble {
@@ -202,10 +261,17 @@ body {
 .ShoppingCart .tab .CartItem .left {
   display: flex;
   align-items: center;
-  margin-right: 100px;
+  outline: auto;
 }
 .ShoppingCart .tab .CartItem .left .name {
   margin-left: 20px;
+}
+.ShoppingCart .tab .CartItem .left .name a {
+  text-decoration: none;
+  color: black;
+}
+.ShoppingCart .tab .CartItem .left .name a:hover {
+  text-decoration: underline;
 }
 .ShoppingCart .tab .CartItem .left .name span,
 .ShoppingCart .tab .CartItem .left .name .itemPrice {
@@ -216,6 +282,7 @@ body {
   padding: 0;
 }
 .ShoppingCart .tab .CartItem .right {
+  outline: auto;
   clear: all;
   padding: 0;
   margin: 0;
@@ -368,6 +435,19 @@ body {
   padding: 10px 30px;
   margin: 10px 5px;
 }
+.Product .carusel {
+  outline: blue solid 1px;
+  width: 90%;
+}
+.Product .carusel img {
+  width: 50px;
+}
+.Product .carusel .ProductsCarusel {
+  outline: black solid 1px;
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 85%;
+}
 
 .About {
   padding-top: 200px;
@@ -387,23 +467,41 @@ body {
   .Navbar .btn {
     display: none;
   }
+  .Navbar .logo {
+    width: 130px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .Navbar .cartIcon {
+    width: 24px;
+    right: 55px;
+  }
+  .Navbar .cartIcon .cartCount {
+    top: -12px;
+    right: -11px;
+    font-size: 12px;
+    height: 20px;
+    width: 20px;
+  }
   .Navbar .mobileMenu {
     display: block;
     position: absolute;
-    top: 20px;
-    left: 30px;
+    top: 50%;
+    left: 40px;
+    transform: translate(0%, -50%);
     clear: all;
-    background-color: white;
+    background-color: transparent;
+    padding: 0;
   }
   .Navbar .mobileMenu:hover {
     cursor: pointer;
-    background-color: white;
   }
   .Navbar .mobileMenu img {
     width: 30px;
     padding: 0;
   }
-  .MobileMenu {
+  .MobileMenuTab {
     position: fixed;
     top: 0;
     left: 0;
@@ -421,7 +519,7 @@ body {
       left: 0;
     }
   }
-  .MobileMenu .close_menu {
+  .MobileMenuTab .close_menu {
     display: block;
     position: absolute;
     top: 20px;
@@ -429,13 +527,13 @@ body {
     clear: all;
     background-color: black;
   }
-  .MobileMenu .close_menu:hover {
+  .MobileMenuTab .close_menu:hover {
     cursor: pointer;
   }
-  .MobileMenu .close_menu img {
+  .MobileMenuTab .close_menu img {
     width: 45px;
   }
-  .MobileMenu .tab {
+  .MobileMenuTab .tab {
     padding-top: 100px;
     background-color: black;
     width: 70vw;
@@ -443,11 +541,20 @@ body {
     display: flex;
     flex-direction: column;
   }
-  .MobileMenu .tab .link {
+  .MobileMenuTab .tab .link {
     text-decoration: none;
     color: white;
     font-size: 23px;
     padding: 15px 65px;
+  }
+  .ShoppingCart {
+    outline: green solid 1px;
+  }
+  .ShoppingCart .tab {
+    font-size: 25px;
+  }
+  .ShoppingCart .tab .CartItem {
+    font-size: 17px;
   }
   .Product {
     display: block;

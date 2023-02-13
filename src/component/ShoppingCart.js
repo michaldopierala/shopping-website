@@ -4,6 +4,7 @@ import CartItem from './CartItem'
 import products from '../data/products.json'
 
 
+
 export default function ShoppingCart() {
     const { closeCart, cartOpen, cartItems, CartQuantity } = useContext(ShoppingCartContext)
 
@@ -12,6 +13,7 @@ export default function ShoppingCart() {
     return (
         <div className='ShoppingCart'>
             <div className='tab'> Cart
+
             <button className='close_btn' onClick={closeCart}><img src='./img/close.png' alt='close button' /></button>
                 {CartQuantity > 0 ? cartItems.map((item, index) => <CartItem key={index} {...item} />) : <div> cart is empty </div>}
 

@@ -4,6 +4,8 @@ import Slider from '../component/imageSlider/Slider'
 import ImgButtons from '../component/imageSlider/ImgButtons';
 import { ShoppingCartContext } from '../context/CartContext';
 import products from '../data/products.json'
+import ProductsCarusel from '../component/ProductsCarusel'
+
 
 
 // import { isButtonElement } from 'react-router-dom/dist/dom';
@@ -76,6 +78,11 @@ export default function Product() {
                     <div className='text'> {product.description} </div>
                 </div>
             </div>
+
+            <div className='carusel'>
+                <ProductsCarusel />
+            </div>
+
         </div>
     )
 }

@@ -20,7 +20,7 @@
 
 
     .product_name {
-        margin-top: 20px;
+        margin: 10px;
         margin-bottom: 10px;
         display: flex;
         flex-direction: row;
@@ -28,20 +28,21 @@
         font-size: 22px;
 
         .price {
+            margin: 10px;
             font-size: 20px;
-            color: rgb(80, 80, 80);
+            color: rgb(110,110, 110);
         }
     }
 
-    button {
-        padding: 10px;
-        background-color: black;
-    }
+
 
     .changeQuantity {
+        // display: flex;
 
-        .addProduct {
-            width: 90%;
+        button {
+            background-color: black;
+            margin: 0px auto;
+
         }
 
         &>div {
@@ -49,11 +50,16 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+        }
+
+        .addProduct {
+            margin-top: 28px;
         }
 
 
-
         .showQuantity {
+
             display: flex;
             justify-content: center;
             align-items: center;
@@ -81,7 +87,11 @@
         .remove {
             text-align: center;
             margin: 0 auto;
+            margin-top: 20px;
         }
+
+
+
     }
 
 
