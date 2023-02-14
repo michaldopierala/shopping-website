@@ -176,7 +176,7 @@ body {
     right: 0;
     width: 100%;
     z-index: 2;
-    background-color: rgba($primary-color, 50%);
+    background-color: rgba(black, 50%);
     height: 100vh;
 
     .close_btn {
@@ -192,7 +192,6 @@ body {
         img {
             width: 50px;
         }
-
     }
 
     .tab {
@@ -200,12 +199,13 @@ body {
         position: absolute;
         top: 0;
         right: 0;
-        height: 19vh;
-        padding: 7px 30px;
+        height: 100vh;
+        padding: 15px 30px;
         background-color: white;
         font-size: 30px;
-        outline: solid red 4px;
-        width: 80%;
+        min-width: 400px;
+        // min-width: auto;
+        // width: 80%;
 
 
         animation: wobble 0.5s 1;
@@ -236,7 +236,6 @@ body {
             .left {
                 display: flex;
                 align-items: center;
-                outline: auto;
 
                 .name {
                     margin-left: 20px;
@@ -262,7 +261,6 @@ body {
             }
 
             .right {
-                outline: auto;
                 clear: all;
                 padding: 0;
                 margin: 0;
@@ -299,6 +297,11 @@ body {
                 height: 100px;
                 object-fit: cover;
             }
+        }
+
+        .cartEmpty {
+            text-align: center;
+            margin-top: 30vh;
         }
     }
 

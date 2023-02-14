@@ -10,7 +10,6 @@ button {
   font-family: "Helvetica Neue W31", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
-  padding: 5px 25px;
 }
 button:hover {
   cursor: pointer;
@@ -54,6 +53,8 @@ input {
 .StoreItem .changeQuantity button {
   background-color: black;
   margin: 0px auto;
+  padding: 5px 25px;
+  font-weight: 400;
 }
 .StoreItem .changeQuantity > div {
   display: flex;
@@ -212,7 +213,7 @@ body {
   right: 0;
   width: 100%;
   z-index: 2;
-  background-color: rgba(132, 94, 194, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
 }
 .ShoppingCart .close_btn {
@@ -231,12 +232,11 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  height: 19vh;
-  padding: 7px 30px;
+  height: 100vh;
+  padding: 15px 30px;
   background-color: white;
   font-size: 30px;
-  outline: solid red 4px;
-  width: 80%;
+  min-width: 400px;
   animation: wobble 0.5s 1;
 }
 @keyframes wobble {
@@ -261,7 +261,6 @@ body {
 .ShoppingCart .tab .CartItem .left {
   display: flex;
   align-items: center;
-  outline: auto;
 }
 .ShoppingCart .tab .CartItem .left .name {
   margin-left: 20px;
@@ -282,7 +281,6 @@ body {
   padding: 0;
 }
 .ShoppingCart .tab .CartItem .right {
-  outline: auto;
   clear: all;
   padding: 0;
   margin: 0;
@@ -312,6 +310,10 @@ body {
   width: 100px;
   height: 100px;
   object-fit: cover;
+}
+.ShoppingCart .tab .cartEmpty {
+  text-align: center;
+  margin-top: 30vh;
 }
 
 .Store {
@@ -551,10 +553,24 @@ body {
     outline: green solid 1px;
   }
   .ShoppingCart .tab {
-    font-size: 25px;
+    font-size: 20px;
+    min-width: auto;
+    width: 80vw;
+    padding: 18px 20px;
   }
   .ShoppingCart .tab .CartItem {
-    font-size: 17px;
+    font-size: 15px;
+  }
+  .ShoppingCart .tab .CartItem .left .name {
+    margin-left: 10px;
+  }
+  .ShoppingCart .tab .CartItem .left .name span,
+.ShoppingCart .tab .CartItem .left .name .itemPrice {
+    font-size: 12px;
+  }
+  .ShoppingCart .tab .CartItem img {
+    width: 85px;
+    height: 85px;
   }
   .Product {
     display: block;
