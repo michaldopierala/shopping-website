@@ -1,0 +1,609 @@
+button {
+  font-family: "Helvetica Neue W31", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  letter-spacing: 1.1px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: "Helvetica Neue W31", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+button:hover {
+  cursor: pointer;
+  background: #00d8b4;
+}
+
+input {
+  padding: 10px 20px;
+  background-color: #FBEAFF;
+  border: none;
+  border-radius: 10px;
+}
+
+.StoreItem .imgConatainer {
+  overflow: hidden;
+}
+.StoreItem .imgConatainer img {
+  display: block;
+  width: 100%;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+.StoreItem .imgConatainer img:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.StoreItem .product_name {
+  margin: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 22px;
+}
+.StoreItem .product_name .price {
+  margin: 10px;
+  font-size: 20px;
+  color: rgb(110, 110, 110);
+}
+.StoreItem .changeQuantity button {
+  background-color: black;
+  margin: 0px auto;
+  padding: 9px 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.StoreItem .changeQuantity > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.StoreItem .changeQuantity .addProduct {
+  margin-top: 28px;
+}
+.StoreItem .changeQuantity .showQuantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.StoreItem .changeQuantity .showQuantity button {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 5px 10px;
+}
+.StoreItem .changeQuantity .showQuantity .inCart {
+  text-align: center;
+  width: 70px;
+}
+.StoreItem .changeQuantity .showQuantity .inCart span {
+  font-size: 14px;
+}
+.StoreItem .changeQuantity .remove {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+  font-family: "Helvetica Neue W31", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.007em;
+}
+
+.Navbar {
+  z-index: 100;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 10px -1px gray;
+  z-index: 2;
+}
+.Navbar .btn {
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+  font-size: 20px;
+  color: black;
+}
+.Navbar .btn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.Navbar .logo {
+  position: absolute;
+  top: 7px;
+  left: 50px;
+  width: 200px;
+}
+.Navbar .cartIcon {
+  all: unset;
+  width: 27px;
+  position: absolute;
+  top: 22px;
+  right: 70px;
+}
+.Navbar .cartIcon:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.Navbar .cartIcon img {
+  width: 100%;
+}
+.Navbar .cartIcon .cartCount {
+  position: absolute;
+  top: -15px;
+  right: -12px;
+  color: white;
+  background-color: red;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+.Navbar .mobileMenu {
+  display: none;
+}
+
+.Home {
+  padding-top: 70px;
+}
+.Home .homeCarusel .react-multi-carousel-dot {
+  padding-bottom: 40px;
+}
+.Home .homeCarusel .react-multi-carousel-dot button {
+  padding: 7px;
+  background: rgba(255, 255, 255, 0.2);
+  border: solid rgba(104, 103, 103, 0.2) 2px;
+}
+.Home .homeCarusel .react-multi-carousel-dot--active button {
+  background: rgba(255, 255, 255, 0.5);
+  border: solid rgba(255, 255, 255, 0.2) 2px;
+}
+.Home .homeCarusel .react-multiple-carousel__arrow {
+  z-index: 0;
+}
+.Home .homeCarusel .container {
+  position: relative;
+}
+.Home .homeCarusel .container img {
+  width: 100%;
+}
+.Home .homeCarusel .container .text {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: white;
+  font-size: 50px;
+  text-decoration: none;
+}
+.Home .ProductsCarusel {
+  outline: black solid 1px;
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 85%;
+}
+.Home .ProductsCarusel img {
+  margin: 20px;
+  width: 150px;
+}
+
+.ShoppingCart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+}
+.ShoppingCart .close_btn {
+  all: unset;
+  position: absolute;
+  top: 9px;
+  right: 35px;
+}
+.ShoppingCart .close_btn:hover {
+  cursor: pointer;
+}
+.ShoppingCart .close_btn img {
+  width: 50px;
+}
+.ShoppingCart .tab {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding: 15px 30px;
+  background-color: white;
+  font-size: 30px;
+  min-width: 400px;
+  animation: wobble 0.5s 1;
+}
+@keyframes wobble {
+  from {
+    right: -400px;
+  }
+  to {
+    right: 0;
+  }
+}
+.ShoppingCart .tab .total {
+  text-align: right;
+  margin-top: 30px;
+}
+.ShoppingCart .tab .CartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.ShoppingCart .tab .CartItem .left {
+  display: flex;
+  align-items: center;
+}
+.ShoppingCart .tab .CartItem .left .name {
+  margin-left: 20px;
+}
+.ShoppingCart .tab .CartItem .left .name a {
+  text-decoration: none;
+  color: black;
+}
+.ShoppingCart .tab .CartItem .left .name a:hover {
+  text-decoration: underline;
+}
+.ShoppingCart .tab .CartItem .left .name span,
+.ShoppingCart .tab .CartItem .left .name .itemPrice {
+  margin-left: 7px;
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+  margin: 0;
+  padding: 0;
+}
+.ShoppingCart .tab .CartItem .right {
+  clear: all;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+.ShoppingCart .tab .CartItem .right span {
+  text-decoration: none;
+  clear: all;
+  line-height: -4px;
+}
+.ShoppingCart .tab .CartItem .right button {
+  clear: all;
+  padding: 0;
+  margin: 0;
+  padding: 3px 5px;
+  border: black solid 1px;
+  border-radius: 5px;
+  background-color: white;
+  color: rgb(100, 100, 100);
+  margin-left: 12px;
+  font-size: 8px;
+}
+.ShoppingCart .tab .CartItem .right button:hover {
+  background-color: rgb(230, 230, 230);
+}
+.ShoppingCart .tab .CartItem img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.ShoppingCart .tab .cartEmpty {
+  text-align: center;
+  margin-top: 30vh;
+}
+
+.Store {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-gap: 50px;
+  justify-content: space-around;
+  padding: 70px;
+  padding-top: 200px;
+}
+
+.Product {
+  padding-top: 130px;
+  display: grid;
+  grid-template-columns: 55% 1fr;
+}
+.Product .sliderContainer {
+  position: relative;
+}
+.Product .sliderContainer .slider {
+  float: right;
+  width: 70%;
+}
+.Product .sliderContainer .slider img {
+  width: 100%;
+}
+.Product .sliderContainer .slider .counter {
+  display: none;
+}
+.Product .sliderContainer .react-multi-carousel-dot {
+  padding-bottom: 40px;
+}
+.Product .sliderContainer .react-multi-carousel-dot button {
+  padding: 7px;
+  background: rgba(255, 255, 255, 0.2);
+  border: solid rgba(104, 103, 103, 0.2) 2px;
+}
+.Product .sliderContainer .react-multi-carousel-dot--active button {
+  background: rgba(255, 255, 255, 0.5);
+  border: solid rgba(255, 255, 255, 0.2) 2px;
+}
+.Product .sliderContainer .react-multiple-carousel__arrow {
+  z-index: 0;
+}
+.Product .sliderContainer .ButtonGroup {
+  width: 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Product .sliderContainer .ButtonGroup .imgSelector {
+  margin: 0 auto;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Product .sliderContainer .ButtonGroup .imgSelector button {
+  background-color: white;
+  margin-bottom: 18%;
+}
+.Product .sliderContainer .ButtonGroup .imgSelector .active img {
+  box-shadow: 0px 0px 12px black;
+}
+.Product .description {
+  padding: 40px 60px;
+}
+.Product .description .name {
+  font-size: 35px;
+}
+.Product .description .price {
+  font-size: 20px;
+  font-weight: 900;
+  border-bottom: gray solid 1px;
+  padding-bottom: 20px;
+}
+.Product .description .addToCart {
+  text-align: center;
+}
+.Product .description .addToCart button {
+  margin-top: 30px;
+  background-color: black;
+  padding: 10px 30px;
+  font-size: 17px;
+}
+.Product .description .textDescription {
+  margin-top: 50px;
+}
+.Product .description .textDescription .title {
+  display: inline-block;
+  border-bottom: black solid 2px;
+  font-size: 19px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.Product .description .textDescription .text {
+  margin-top: 20px;
+}
+.Product .description .inCart {
+  margin-top: 40px;
+  text-align: center;
+}
+.Product .description .inCart button {
+  background-color: black;
+}
+.Product .description .inCart .addToCart {
+  padding: 10px 30px;
+}
+.Product .description .inCart .changeQuantity button {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 5px 5px;
+}
+.Product .description .inCart .changeQuantity .quantity {
+  font-size: 25px;
+}
+.Product .description .inCart .remove {
+  padding: 10px 30px;
+  margin: 10px 5px;
+}
+.Product .carusel {
+  outline: blue solid 1px;
+  width: 90%;
+}
+.Product .carusel img {
+  width: 50px;
+}
+.Product .carusel .ProductsCarusel {
+  outline: black solid 1px;
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 85%;
+}
+
+.About {
+  padding-top: 200px;
+}
+
+.Footer {
+  background-color: black;
+  color: white;
+  margin-top: 200px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .Navbar .btn {
+    display: none;
+  }
+  .Navbar .logo {
+    width: 130px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .Navbar .cartIcon {
+    width: 24px;
+    right: 55px;
+  }
+  .Navbar .cartIcon .cartCount {
+    top: -12px;
+    right: -11px;
+    font-size: 12px;
+    height: 20px;
+    width: 20px;
+  }
+  .Navbar .mobileMenu {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translate(0%, -50%);
+    clear: all;
+    background-color: transparent;
+    padding: 0;
+  }
+  .Navbar .mobileMenu:hover {
+    cursor: pointer;
+  }
+  .Navbar .mobileMenu img {
+    width: 30px;
+    padding: 0;
+  }
+  .MobileMenuTab {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: mobile 0.5s 1;
+  }
+  @keyframes mobile {
+    from {
+      left: -400px;
+    }
+    to {
+      left: 0;
+    }
+  }
+  .MobileMenuTab .close_menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    clear: all;
+    background-color: black;
+  }
+  .MobileMenuTab .close_menu:hover {
+    cursor: pointer;
+  }
+  .MobileMenuTab .close_menu img {
+    width: 45px;
+  }
+  .MobileMenuTab .tab {
+    padding-top: 100px;
+    background-color: black;
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .MobileMenuTab .tab .link {
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    padding: 15px 65px;
+  }
+  .ShoppingCart {
+    outline: green solid 1px;
+  }
+  .ShoppingCart .tab {
+    font-size: 20px;
+    min-width: auto;
+    width: 80vw;
+    padding: 18px 20px;
+  }
+  .ShoppingCart .tab .CartItem {
+    font-size: 15px;
+  }
+  .ShoppingCart .tab .CartItem .left .name {
+    margin-left: 10px;
+  }
+  .ShoppingCart .tab .CartItem .left .name span,
+.ShoppingCart .tab .CartItem .left .name .itemPrice {
+    font-size: 12px;
+  }
+  .ShoppingCart .tab .CartItem img {
+    width: 85px;
+    height: 85px;
+  }
+  .Product {
+    display: block;
+  }
+  .Product .sliderContainer .slider {
+    position: relative;
+    float: none;
+    margin: 0 auto;
+  }
+  .Product .sliderContainer .slider .counter {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: rgba(120, 120, 120, 0.6);
+    border-radius: 25px;
+    padding: 5px 15px;
+    color: white;
+    letter-spacing: 1.9px;
+  }
+  .Product .sliderContainer .ButtonGroup {
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+  .Product .sliderContainer .ButtonGroup .imgSelector {
+    display: none;
+  }
+  .Product .sliderContainer .ButtonGroup .imgSelector .counter {
+    display: block;
+  }
+  .Product .description {
+    padding: 40px 16%;
+  }
+}
