@@ -17,7 +17,7 @@ export default function ShoppingCart() {
                 <button className='close_btn' onClick={closeCart}><img src='./img/close.png' alt='close button' /></button>
                 {CartQuantity > 0 ?
                     cartItems.map((item, index) => <CartItem key={index} {...item} />)
-                    : <div className='cartEmpty'> cart is empty </div>}
+                    : <div className='cartEmpty'> Cart is empty </div>}
 
                 {CartQuantity > 0 ?
                     <div className='total'>Total: ${cartItems.reduce((total, cartItem) => {

@@ -8,8 +8,7 @@ button {
   border-radius: 5px;
   color: white;
   font-family: "Helvetica Neue W31", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 13px;
 }
 button:hover {
   cursor: pointer;
@@ -53,8 +52,10 @@ input {
 .StoreItem .changeQuantity button {
   background-color: black;
   margin: 0px auto;
-  padding: 5px 25px;
+  padding: 9px 25px;
   font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
 }
 .StoreItem .changeQuantity > div {
   display: flex;
