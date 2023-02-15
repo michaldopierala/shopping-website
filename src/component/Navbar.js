@@ -14,7 +14,7 @@ export default function Navbar() {
                 <Link className="btn" to="/">Home </Link>
                 <Link className="btn" to="store">Store</Link>
                 <Link className="btn" to="about">About</Link>
-                <img className='logo' src='../img/logo-black.png' alt='logo'/>
+                <img className='logo' src='../img/logo.png' alt='logo'/>
                 <button onClick={closeCart} className='cartIcon'>
                     {/* <img src='../img/cart.png' alt='cart icon'/> */}
                     <div className='cartCount'> <span>{CartQuantity}</span>  </div>

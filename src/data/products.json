@@ -4,7 +4,7 @@
         "name": "Watch",
         "price": 100,
         "imgUrl": [
-            "img/product/id1/2.jpeg",
+            "../../../img/product/id1/2.jpeg",
             "../img/product/id1/1.jpeg",
             "../img/product/id1/3.jpeg",
             "../img/product/id1/4.jpeg"

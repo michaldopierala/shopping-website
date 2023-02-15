@@ -120,8 +120,10 @@ body {
   text-decoration: none;
   padding: 5px;
   margin: 5px;
-  font-size: 20px;
+  font-size: 15px;
   color: black;
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
 }
 .Navbar .btn:hover {
   cursor: pointer;
@@ -129,9 +131,10 @@ body {
 }
 .Navbar .logo {
   position: absolute;
-  top: 7px;
-  left: 50px;
-  width: 200px;
+  top: 50%;
+  left: 30px;
+  transform: translate(0%, -50%);
+  width: 170px;
 }
 .Navbar .cartIcon {
   all: unset;
