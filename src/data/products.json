@@ -4,7 +4,7 @@
         "name": "Watch",
         "price": 100,
         "imgUrl": [
-            "../img/product/id1/2.jpeg",
+            "img/product/id1/2.jpeg",
             "../img/product/id1/1.jpeg",
             "../img/product/id1/3.jpeg",
             "../img/product/id1/4.jpeg"
@@ -16,7 +16,7 @@
         "name": "Phone",
         "price": 1200,
         "imgUrl": [
-            "../img/product/id2/1.jpeg",
+            "./img/product/id2/1.jpeg",
             "../img/product/id2/2.jpeg",
             "../img/product/id2/3.jpeg",
             "../img/product/id2/4.jpeg"
@@ -29,7 +29,7 @@
         "name": "Fregrent",
         "price": 50,
         "imgUrl": [
-            "../img/product/id3/1.jpeg",
+            "/img/product/id3/1.jpeg",
             "../img/product/id3/2.jpeg",
             "../img/product/id3/3.jpeg",
             "../img/product/id3/4.jpeg"
@@ -42,7 +42,7 @@
         "name": "Icecream",
         "price": 4.99,
         "imgUrl": [
-            "../img/product/id4/1.jpeg",
+            "../../img/product/id4/1.jpeg",
             "../img/product/id4/2.jpeg",
             "../img/product/id4/3.jpeg",
             "../img/product/id4/4.jpeg"
