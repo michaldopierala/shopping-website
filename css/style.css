@@ -9,10 +9,20 @@ button {
   color: white;
   font-family: "Helvetica Neue W31", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
+  background-color: black;
 }
-button:hover {
+
+.add_to_cart_btn {
+  background-color: black;
+  margin: 0px auto;
+  padding: 9px 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.add_to_cart_btn:hover {
   cursor: pointer;
-  background: #00d8b4;
+  background: rgb(60, 60, 60);
 }
 
 input {
@@ -48,14 +58,6 @@ input {
   margin: 10px;
   font-size: 20px;
   color: rgb(110, 110, 110);
-}
-.StoreItem .changeQuantity button {
-  background-color: black;
-  margin: 0px auto;
-  padding: 9px 25px;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 13px;
 }
 .StoreItem .changeQuantity > div {
   display: flex;
@@ -201,14 +203,62 @@ body {
   text-decoration: none;
 }
 .Home .ProductsCarusel {
-  outline: black solid 1px;
+  border-top: rgb(100, 100, 100) solid 0.5px;
   margin: 0 auto;
   margin-top: 70px;
   width: 85%;
 }
-.Home .ProductsCarusel img {
+.Home .ProductsCarusel .recomended {
+  text-transform: uppercase;
+  text-align: center;
   margin: 20px;
-  width: 150px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.Home .ProductsCarusel .carusel .test {
+  padding: 30px 200px;
+  padding-left: 100px;
+  padding-right: 0px;
+}
+.Home .ProductsCarusel .carusel .test .productContainer {
+  letter-spacing: 1.3px;
+}
+.Home .ProductsCarusel .carusel .test .productContainer .product {
+  width: 80%;
+  font-size: 20px;
+}
+.Home .ProductsCarusel .carusel .test .productContainer .product .price {
+  margin-top: 7px;
+  font-size: 17px;
+  color: rgb(120, 120, 120);
+}
+.Home .ProductsCarusel .carusel .test .productContainer .product button {
+  height: 200px;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 10px;
+}
+.Home .ProductsCarusel .carusel .test .productContainer .product img {
+  width: 100%;
+}
+.Home .ProductsCarusel .carusel .test .react-multiple-carousel__arrow {
+  z-index: 0;
+  position: absolute;
+  border-radius: 0px;
+  top: 0%;
+  height: 100%;
+  background-color: white;
+}
+.Home .ProductsCarusel .carusel .test .react-multiple-carousel__arrow::before {
+  color: black;
+  z-index: 2;
+  font-size: 30px;
+}
+.Home .ProductsCarusel .carusel .test .react-multiple-carousel__arrow--left {
+  left: 0px;
+}
+.Home .ProductsCarusel .carusel .test .react-multiple-carousel__arrow--right {
+  right: 0px;
 }
 
 .ShoppingCart {
@@ -239,7 +289,7 @@ body {
   height: 100vh;
   padding: 15px 30px;
   background-color: white;
-  font-size: 30px;
+  font-size: 20px;
   min-width: 400px;
   animation: wobble 0.5s 1;
 }
@@ -254,6 +304,7 @@ body {
 .ShoppingCart .tab .total {
   text-align: right;
   margin-top: 30px;
+  font-weight: 400;
 }
 .ShoppingCart .tab .CartItem {
   display: flex;
@@ -285,15 +336,13 @@ body {
   padding: 0;
 }
 .ShoppingCart .tab .CartItem .right {
-  clear: all;
   padding: 0;
   margin: 0;
-  float: right;
+  display: flex;
+  align-items: center;
 }
 .ShoppingCart .tab .CartItem .right span {
   text-decoration: none;
-  clear: all;
-  line-height: -4px;
 }
 .ShoppingCart .tab .CartItem .right button {
   clear: all;
@@ -305,7 +354,7 @@ body {
   background-color: white;
   color: rgb(100, 100, 100);
   margin-left: 12px;
-  font-size: 8px;
+  font-size: 15px;
 }
 .ShoppingCart .tab .CartItem .right button:hover {
   background-color: rgb(230, 230, 230);
@@ -423,9 +472,10 @@ body {
 }
 .Product .description .inCart button {
   background-color: black;
+  color: white;
 }
-.Product .description .inCart .addToCart {
-  padding: 10px 30px;
+.Product .description .inCart .changeQuantity {
+  margin-bottom: 20px;
 }
 .Product .description .inCart .changeQuantity button {
   height: 32px;
@@ -433,13 +483,10 @@ body {
   border-radius: 50%;
   padding: 0;
   margin: 5px 5px;
+  font-size: 25px;
 }
 .Product .description .inCart .changeQuantity .quantity {
   font-size: 25px;
-}
-.Product .description .inCart .remove {
-  padding: 10px 30px;
-  margin: 10px 5px;
 }
 .Product .carusel {
   outline: blue solid 1px;
@@ -554,7 +601,7 @@ body {
     padding: 15px 65px;
   }
   .ShoppingCart {
-    outline: green solid 1px;
+    font-size: 20px;
   }
   .ShoppingCart .tab {
     font-size: 20px;
@@ -563,14 +610,14 @@ body {
     padding: 18px 20px;
   }
   .ShoppingCart .tab .CartItem {
-    font-size: 15px;
+    font-size: 20px;
   }
   .ShoppingCart .tab .CartItem .left .name {
     margin-left: 10px;
   }
   .ShoppingCart .tab .CartItem .left .name span,
 .ShoppingCart .tab .CartItem .left .name .itemPrice {
-    font-size: 12px;
+    font-size: 15px;
   }
   .ShoppingCart .tab .CartItem img {
     width: 85px;
