@@ -52,6 +52,30 @@
     }
   }
 
+  .Home {
+    .ProductsCarusel {
+      width: 100%;
+
+      .carusel {
+        .test {
+          .productContainer {
+
+            .product {
+              width: 70%;
+              margin: 0 auto;
+
+              // outline: red solid 1px;
+              img {
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+
 
   .MobileMenuTab {
     position: fixed;
@@ -116,27 +140,21 @@
 
 
   .ShoppingCart {
-    // width: auto;
-    // width: 100%;
-    outline: green solid 1px;
+    font-size: 20px;
 
 
     .tab {
       font-size: 20px;
-      // width: 100%;
-      //  min-width: 50vw;
+
       min-width: auto;
 
-      //  max-width: 50vw;
       width: 80vw;
       padding: 18px 20px;
-      // padding-top: 30px;
 
-      //  padding: 0;
 
 
       .CartItem {
-        font-size: 15px;
+        font-size: 20px;
 
         .left {
           .name {
@@ -144,8 +162,7 @@
 
             span,
             .itemPrice {
-              // margin-left: 7px;
-              font-size: 12px;
+              font-size: 15px;
             }
           }
         }
@@ -163,53 +180,66 @@
 
 
   .Product {
-    display: block;
-    // grid-template-columns: 100%;
 
-    .sliderContainer {
+    .slider_and_description {
+      display: block;
 
-      .slider {
+      .sliderContainer {
 
-        position: relative;
-        float: none;
-        margin: 0 auto;
+        .slider {
 
-        .counter {
-
-          display: block;
-          position: absolute;
-          top: 20px;
-          right: 30px;
-          background-color: rgba(120, 120, 120, 0.6);
-          border-radius: 25px;
-          padding: 5px 15px;
-          color: white;
-          letter-spacing: 1.9px;
-
-        }
-
-      }
-
-      .ButtonGroup {
-        top: 0;
-        right: 0;
-        width: 100%;
-
-        .imgSelector {
-          display: none;
-          // position: static;
+          position: relative;
+          float: none;
+          margin: 0 auto;
 
           .counter {
+
             display: block;
+            position: absolute;
+            top: 17px;
+            right: 20px;
+            background-color: rgba(white, 0.3);
+            border-radius: 25px;
+            padding: 5px 15px;
+            color: rgb(40,40,40);
+            color: black;
+            // font-weight: bold;
+            font-weight: 400;
+            letter-spacing: 1.9px;
+
+          }
+
+        }
+
+        .ButtonGroup {
+          top: 0;
+          right: 0;
+          width: 100%;
+
+          .imgSelector {
+            display: none;
+            // position: static;
+
+            .counter {
+              display: block;
+            }
           }
         }
+
       }
 
+      .description {
+        padding: 40px 16%;
+      }
+
+
     }
 
-    .description {
-      padding: 40px 16%;
-    }
+.otherProductsCarusel {
+  width: 100%;
+}
+
+
   }
 
 

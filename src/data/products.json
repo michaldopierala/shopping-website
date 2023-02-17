@@ -4,10 +4,10 @@
         "name": "Watch",
         "price": 100,
         "imgUrl": [
-            "../../../img/product/id1/2.jpeg",
-            "../img/product/id1/1.jpeg",
-            "../img/product/id1/3.jpeg",
-            "../img/product/id1/4.jpeg"
+            "/img/product/id1/2.jpeg",
+            "/img/product/id1/1.jpeg",
+            "/img/product/id1/3.jpeg",
+            "/img/product/id1/4.jpeg"
         ],
         "description": "What is a product description? A product description is the marketing copy that explains what a product is and why it's worth purchasing. The purpose of a product description is to supply customers with important information about the features and key benefits of the product so they're compelled to buy."
     },
@@ -16,7 +16,7 @@
         "name": "Phone",
         "price": 1200,
         "imgUrl": [
-            "./img/product/id2/1.jpeg",
+            "../img/product/id2/1.jpeg",
             "../img/product/id2/2.jpeg",
             "../img/product/id2/3.jpeg",
             "../img/product/id2/4.jpeg"
@@ -29,7 +29,7 @@
         "name": "Fregrent",
         "price": 50,
         "imgUrl": [
-            "/img/product/id3/1.jpeg",
+            "../img/product/id3/1.jpeg",
             "../img/product/id3/2.jpeg",
             "../img/product/id3/3.jpeg",
             "../img/product/id3/4.jpeg"
@@ -42,7 +42,7 @@
         "name": "Icecream",
         "price": 4.99,
         "imgUrl": [
-            "../../img/product/id4/1.jpeg",
+            "../img/product/id4/1.jpeg",
             "../img/product/id4/2.jpeg",
             "../img/product/id4/3.jpeg",
             "../img/product/id4/4.jpeg"

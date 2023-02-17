@@ -12,8 +12,8 @@ import Footer from './component/Footer';
 function App() {
   return (
     <>
-      <CartContext>
-        <BrowserRouter>
+      <BrowserRouter>
+        <CartContext>   {/* Should contex be inside of router or outside ?  */}
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -22,8 +22,9 @@ function App() {
             <Route path="/product/:id" element={<Product />} />
           </Routes>
           <Footer />
-        </BrowserRouter>
-      </CartContext>
+        </CartContext>
+      </BrowserRouter>
+
     </>
   );
 }

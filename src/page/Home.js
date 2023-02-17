@@ -11,6 +11,7 @@ export default function Home() {
             <HomeCarusel />
 
             <div className='ProductsCarusel'>
+                <div className='recomended'>Recomended for you </div>
                 <ProductsCarusel />
             </div>
         </div>

@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 export default function CartItem({ id, quantity }) {
 
-  const { remove } = useContext(ShoppingCartContext)
+  const { remove, closeCart } = useContext(ShoppingCartContext)
 
 
   const product = products.find((item) => item.id === id)
@@ -21,7 +21,7 @@ export default function CartItem({ id, quantity }) {
         <img src={product.imgUrl[0]} alt='product image' />
         <div className='name'>
           {/* <Link to="/"> </Link> */}
-          <a href={"/product/"+id}> {product.name}  </a>
+          <Link to={`../product/${product.id}`} onClick={closeCart} > {product.name}  </Link>
          
           <span>x {quantity} </span>
           <div className='itemPrice'> $ {product.price}</div>

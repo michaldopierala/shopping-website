@@ -131,7 +131,6 @@ body {
         .react-multi-carousel-dot--active button {
             background: rgba(white, 0.5);
             border: solid rgba(white, 0.2) 2px;
-
         }
 
         .react-multiple-carousel__arrow {
@@ -159,15 +158,77 @@ body {
     }
 
     .ProductsCarusel {
-        outline: black solid 1px;
+        border-top: rgb(100, 100, 100) solid .5px;
         margin: 0 auto;
         margin-top: 70px;
         width: 85%;
 
-
-        img {
+        .recomended {
+            text-transform: uppercase;
+            text-align: center;
             margin: 20px;
-            width: 150px;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        .carusel {
+
+            .test {
+                padding: 30px 200px;
+                padding-left: 100px;
+                padding-right: 0px;
+
+                .productContainer {
+                    letter-spacing: 1.3px;
+
+                    .product {
+                        width: 80%;
+                        font-size: 20px;
+
+                        .price {
+                            margin-top: 7px;
+                            font-size: 17px;
+                            color: rgb(120, 120, 120);
+                        }
+
+                        // button {
+                        //     height: 200px;
+                        //     overflow: hidden;
+                        //     padding: 0;
+                        //     border-radius: 10px;
+                        // }
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .react-multiple-carousel__arrow {
+                    z-index: 0;
+                    position: absolute;
+                    border-radius: 0px;
+                    top: 0%;
+                    height: 100%;
+                    background-color: white;
+                }
+
+                .react-multiple-carousel__arrow::before {
+                    color: black;
+                    z-index: 2;
+                    font-size: 30px;
+                }
+
+                .react-multiple-carousel__arrow--left {
+                    left: 0px;
+                    padding-right: 50px;
+                }
+
+                .react-multiple-carousel__arrow--right {
+                    right: 0px;
+                    padding-left: 50px;
+                }
+            }
         }
     }
 }
@@ -205,7 +266,7 @@ body {
         height: 100vh;
         padding: 15px 30px;
         background-color: white;
-        font-size: 30px;
+        font-size: 20px;
         min-width: 400px;
         // min-width: auto;
         // width: 80%;
@@ -226,6 +287,7 @@ body {
         .total {
             text-align: right;
             margin-top: 30px;
+            font-weight: 400;
         }
 
 
@@ -264,15 +326,13 @@ body {
             }
 
             .right {
-                clear: all;
                 padding: 0;
                 margin: 0;
-                float: right;
+                display: flex;
+                align-items: center;
 
                 span {
                     text-decoration: none;
-                    clear: all;
-                    line-height: -4px;
                 }
 
                 button {
@@ -286,7 +346,7 @@ body {
                     background-color: white;
                     color: rgb(100, 100, 100);
                     margin-left: 12px;
-                    font-size: 8px;
+                    font-size: 15px;
 
                     &:hover {
                         background-color: rgb(230, 230, 230);
@@ -325,197 +385,215 @@ body {
 }
 
 
-
-
-
-
-
 .Product {
-    padding-top: 130px;
-    display: grid;
-    grid-template-columns: 55% 1fr;
 
 
-    .sliderContainer {
-        position: relative;
+    .slider_and_description {
+        padding-top: 130px;
+        display: grid;
+        grid-template-columns: 55% 1fr;
 
-        .slider {
-            float: right;
-            width: 70%;
+        .sliderContainer {
+            position: relative;
 
-            img {
-                width: 100%;
+            .slider {
+                float: right;
+                width: 70%;
+
+                img {
+                    width: 100%;
+                }
+
+                .counter {
+                    display: none;
+                }
             }
 
-            .counter {
-                display: none;
-            }
-        }
-
-        .react-multi-carousel-dot {
-            padding-bottom: 40px;
-
-            button {
-                padding: 7px;
-                background: rgba(white, 0.2);
-                border: solid rgba(rgb(104, 103, 103), 0.2) 2px;
-            }
-        }
-
-        .react-multi-carousel-dot--active button {
-            background: rgba(white, 0.5);
-            border: solid rgba(white, 0.2) 2px;
-
-        }
-
-        .react-multiple-carousel__arrow {
-            z-index: 0;
-        }
-
-        .ButtonGroup {
-            width: 30%;
-            position: absolute;
-            top: 0;
-            left: 0;
-
-
-            .imgSelector {
-                // outline: auto;
-                margin: 0 auto;
-                width: 55%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+            .react-multi-carousel-dot {
+                padding-bottom: 40px;
 
                 button {
-                    background-color: white;
-                    // width: 50%;
-                    // margin: 2%;
-                    margin-bottom: 18%;
-                    // padding: 0;
-                    // overflow: hidden;
+                    padding: 7px;
+                    background: rgba(white, 0.2);
+                    border: solid rgba(rgb(104, 103, 103), 0.2) 2px;
+                }
+            }
 
-                    img {
-                        // width: 100%;
-                        // border-radius: 7%;
+            .react-multi-carousel-dot--active button {
+                background: rgba(white, 0.5);
+                border: solid rgba(white, 0.2) 2px;
+
+            }
+
+            .react-multiple-carousel__arrow {
+                z-index: 0;
+            }
+
+            .ButtonGroup {
+                width: 30%;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                .imgSelector {
+                    margin: 0 auto;
+                    width: 55%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    button {
+                        background-color: white;
+                        margin-bottom: 18%;
                     }
 
-                }
-
-                .active img {
-                    // padding: 0;
-                    box-shadow: 0px 0px 12px black;
-                    // width: 110%;
-
+                    .active img {
+                        box-shadow: 0px 0px 12px black;
+                    }
                 }
             }
-        }
-
-    }
-
-    .description {
-        padding: 40px 60px;
-
-        .name {
-            font-size: 35px;
 
         }
 
-        .price {
-            font-size: 20px;
-            font-weight: 900;
-            border-bottom: gray solid 1px;
-            padding-bottom: 20px;
+        .description {
+            padding: 40px 60px;
 
-        }
-
-        .addToCart {
-            text-align: center;
-
-            button {
-                margin-top: 30px;
-                background-color: black;
-                padding: 10px 30px;
-                font-size: 17px;
+            .name {
+                font-size: 35px;
 
             }
-        }
 
-        .textDescription {
-            margin-top: 50px;
-
-
-            .title {
-                display: inline-block;
-                border-bottom: black solid 2px;
-                font-size: 19px;
+            .price {
+                font-size: 20px;
                 font-weight: 900;
-                text-transform: uppercase;
-            }
+                border-bottom: gray solid 1px;
+                padding-bottom: 20px;
 
-            .text {
-                margin-top: 20px;
-            }
-        }
-
-        .inCart {
-            margin-top: 40px;
-            text-align: center;
-
-            button {
-                background-color: black;
             }
 
             .addToCart {
-                padding: 10px 30px;
-            }
-
-            .changeQuantity {
+                text-align: center;
 
                 button {
-                    height: 32px;
-                    width: 32px;
-                    border-radius: 50%;
-                    padding: 0;
-                    margin: 5px 5px;
+                    margin-top: 30px;
+                    background-color: black;
+                    padding: 10px 30px;
+                    font-size: 17px;
                 }
-
-                .quantity {
-                    font-size: 25px;
-                }
-
             }
 
-            .remove {
+            .textDescription {
+                margin-top: 50px;
 
-                // border-radius: 50%;
-                padding: 10px 30px;
-                margin: 10px 5px;
-                // color: red;
 
+                .title {
+                    display: inline-block;
+                    border-bottom: black solid 2px;
+                    font-size: 19px;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                }
+
+                .text {
+                    margin-top: 20px;
+                }
+            }
+
+            .inCart {
+                margin-top: 40px;
+                text-align: center;
+
+                button {
+                    background-color: black;
+                    color: white;
+                }
+
+
+
+                .changeQuantity {
+                    margin-bottom: 20px;
+
+                    button {
+                        height: 32px;
+                        width: 32px;
+                        border-radius: 50%;
+                        padding: 0;
+                        margin: 5px 5px;
+                        font-size: 25px;
+                    }
+
+                    .quantity {
+                        font-size: 25px;
+                    }
+                }
             }
         }
-
     }
 
-    .carusel {
-        outline: blue solid 1px;
+
+
+    .otherProductsCarusel {
+        margin: 0 auto;
+        margin-top: 100px;
         width: 90%;
 
-        img {
-            width: 50px;
+        .head {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin: 20px;
         }
 
-        .ProductsCarusel {
-            outline: black solid 1px;
-            margin: 0 auto;
-            margin-top: 70px;
-            width: 85%;
+        .carusel {
+
+            .link {
+
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
 
 
+            .productContainer {
+                float: right;
 
+                .product {
+                    width: 70%;
+                    margin-left: auto;
+                }
+            }
+
+            .react-multiple-carousel__arrow {
+                z-index: 0;
+                // position: absolute;
+                border-radius: 0px;
+                top: 0%;
+                height: 100%;
+                background-color: white;
+            }
+
+            .react-multiple-carousel__arrow::before {
+                color: black;
+                z-index: 2;
+                font-size: 30px;
+            }
+
+            .react-multiple-carousel__arrow--left {
+                left: 0px;
+                padding-right: 0px;
+            }
+
+            .react-multiple-carousel__arrow--right {
+                right: 0px;
+                padding-left: 50px;
+            }
         }
+
+
+
     }
 }
 

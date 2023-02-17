@@ -7,33 +7,33 @@ import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 
 
 
-export default function ProductsCarusel() {
+export default function ProductsCarusel2() {
 
     const responsive = {
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 4,
+            breakpoint: { max: 3000, min: 1224 },
+            items: 5,
             slidesToSlide: 1,
-            // partialVisibilityGutter: 60,
+            partialVisibilityGutter: 60,
         },
         tablet: {
-            breakpoint: { max: 1024, min: 600 },
+            breakpoint: { max: 1224, min: 600 },
             items: 4,
             slidesToSlide: 1,
             // partialVisibilityGutter: 30
         },
         mobile: {
             breakpoint: { max: 600, min: 0 },
-            items: 3,
+            items: 2,
             slidesToSlide: 1,
-            // partialVisibilityGutter: 0
+            partialVisibilityGutter: 50,
         }
     }
 
 
     return (
         <div className='carusel'>
-            <Carousel className='test'
+            <Carousel 
                 partialVisible={true}
                 swipeable={true}
                 draggable={true}

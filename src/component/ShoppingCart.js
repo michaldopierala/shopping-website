@@ -14,13 +14,13 @@ export default function ShoppingCart() {
         <div className='ShoppingCart'>
             <div className='tab'> Cart
 
-                <button className='close_btn' onClick={closeCart}><img src='./img/close.png' alt='close button' /></button>
+                <button className='close_btn' onClick={closeCart}><img src='/img/close.png' alt='close button' /></button>
                 {CartQuantity > 0 ?
                     cartItems.map((item, index) => <CartItem key={index} {...item} />)
                     : <div className='cartEmpty'> Cart is empty </div>}
 
                 {CartQuantity > 0 ?
-                    <div className='total'>Total: ${cartItems.reduce((total, cartItem) => {
+                    <div className='total'>Total: $ {cartItems.reduce((total, cartItem) => {
                         const item = products.find(i => i.id === cartItem.id)
                         return total + (item?.price || 0) * cartItem.quantity
                     }, 0)}

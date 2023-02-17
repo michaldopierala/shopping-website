@@ -10,12 +10,12 @@ function openMenu(){
     mobileOpen? setMobileOpen(false) :setMobileOpen(true)
 }
 
-    if (!mobileOpen) return <button className='mobileMenu' onClick={openMenu}> <img src='../img/menu.png' alt='menu' /> </button>
+    if (!mobileOpen) return <button className='mobileMenu' onClick={openMenu}> <img src='/img/menu.png' alt='menu' /> </button>
 
 
     return (
         <div className='MobileMenuTab'>
-            <button className='close_menu' onClick={openMenu}><img src='./img/close_white.png' alt='close button' /></button>
+            <button className='close_menu' onClick={openMenu}><img src='/img/close_white.png' alt='close button' /></button>
 
             <div className='tab'>
                 <Link className="link" onClick={openMenu} to="/">Home </Link>

@@ -1,18 +1,26 @@
 button {
   font-family: "Helvetica Neue W31", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.2;
-  letter-spacing: 0.06em;
-  letter-spacing: 1.1px;
+  letter-spacing: 1.2px;
   border: none;
   border-radius: 5px;
   color: white;
   font-family: "Helvetica Neue W31", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
+  background-color: black;
 }
-button:hover {
+
+.add_to_cart_btn {
+  border-radius: 7px;
+  background-color: black;
+  margin: 0px auto;
+  padding: 9px 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.add_to_cart_btn:hover {
   cursor: pointer;
-  background: #00d8b4;
+  background: rgb(60, 60, 60);
 }
 
 input {
@@ -49,14 +57,6 @@ input {
   font-size: 20px;
   color: rgb(110, 110, 110);
 }
-.StoreItem .changeQuantity button {
-  background-color: black;
-  margin: 0px auto;
-  padding: 9px 25px;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 13px;
-}
 .StoreItem .changeQuantity > div {
   display: flex;
   flex-direction: column;
@@ -72,11 +72,26 @@ input {
   font-size: 20px;
 }
 .StoreItem .changeQuantity .showQuantity button {
+  all: unset;
+  position: relative;
   height: 32px;
   width: 32px;
   border-radius: 50%;
+  background-color: black;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 25px;
   padding: 0;
-  margin: 5px 10px;
+}
+.StoreItem .changeQuantity .showQuantity button span {
+  all: unset;
+  position: absolute;
+  vertical-align: middle;
+  color: white;
+  top: 43%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .StoreItem .changeQuantity .showQuantity .inCart {
   text-align: center;
@@ -201,14 +216,58 @@ body {
   text-decoration: none;
 }
 .Home .ProductsCarusel {
-  outline: black solid 1px;
+  border-top: rgb(100, 100, 100) solid 0.5px;
   margin: 0 auto;
   margin-top: 70px;
   width: 85%;
 }
-.Home .ProductsCarusel img {
+.Home .ProductsCarusel .recomended {
+  text-transform: uppercase;
+  text-align: center;
   margin: 20px;
-  width: 150px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.Home .ProductsCarusel .carusel .test {
+  padding: 30px 200px;
+  padding-left: 100px;
+  padding-right: 0px;
+}
+.Home .ProductsCarusel .carusel .test .productContainer {
+  letter-spacing: 1.3px;
+}
+.Home .ProductsCarusel .carusel .test .productContainer .product {
+  width: 80%;
+  font-size: 20px;
+}
+.Home .ProductsCarusel .carusel .test .productContainer .product .price {
+  margin-top: 7px;
+  font-size: 17px;
+  color: rgb(120, 120, 120);
+}
+.Home .ProductsCarusel .carusel .test .productContainer .product img {
+  width: 100%;
+}
+.Home .ProductsCarusel .carusel .test .react-multiple-carousel__arrow {
+  z-index: 0;
+  position: absolute;
+  border-radius: 0px;
+  top: 0%;
+  height: 100%;
+  background-color: white;
+}
+.Home .ProductsCarusel .carusel .test .react-multiple-carousel__arrow::before {
+  color: black;
+  z-index: 2;
+  font-size: 30px;
+}
+.Home .ProductsCarusel .carusel .test .react-multiple-carousel__arrow--left {
+  left: 0px;
+  padding-right: 50px;
+}
+.Home .ProductsCarusel .carusel .test .react-multiple-carousel__arrow--right {
+  right: 0px;
+  padding-left: 50px;
 }
 
 .ShoppingCart {
@@ -239,7 +298,7 @@ body {
   height: 100vh;
   padding: 15px 30px;
   background-color: white;
-  font-size: 30px;
+  font-size: 20px;
   min-width: 400px;
   animation: wobble 0.5s 1;
 }
@@ -254,6 +313,7 @@ body {
 .ShoppingCart .tab .total {
   text-align: right;
   margin-top: 30px;
+  font-weight: 400;
 }
 .ShoppingCart .tab .CartItem {
   display: flex;
@@ -285,15 +345,13 @@ body {
   padding: 0;
 }
 .ShoppingCart .tab .CartItem .right {
-  clear: all;
   padding: 0;
   margin: 0;
-  float: right;
+  display: flex;
+  align-items: center;
 }
 .ShoppingCart .tab .CartItem .right span {
   text-decoration: none;
-  clear: all;
-  line-height: -4px;
 }
 .ShoppingCart .tab .CartItem .right button {
   clear: all;
@@ -305,7 +363,7 @@ body {
   background-color: white;
   color: rgb(100, 100, 100);
   margin-left: 12px;
-  font-size: 8px;
+  font-size: 15px;
 }
 .ShoppingCart .tab .CartItem .right button:hover {
   background-color: rgb(230, 230, 230);
@@ -329,46 +387,46 @@ body {
   padding-top: 200px;
 }
 
-.Product {
+.Product .slider_and_description {
   padding-top: 130px;
   display: grid;
   grid-template-columns: 55% 1fr;
 }
-.Product .sliderContainer {
+.Product .slider_and_description .sliderContainer {
   position: relative;
 }
-.Product .sliderContainer .slider {
+.Product .slider_and_description .sliderContainer .slider {
   float: right;
   width: 70%;
 }
-.Product .sliderContainer .slider img {
+.Product .slider_and_description .sliderContainer .slider img {
   width: 100%;
 }
-.Product .sliderContainer .slider .counter {
+.Product .slider_and_description .sliderContainer .slider .counter {
   display: none;
 }
-.Product .sliderContainer .react-multi-carousel-dot {
+.Product .slider_and_description .sliderContainer .react-multi-carousel-dot {
   padding-bottom: 40px;
 }
-.Product .sliderContainer .react-multi-carousel-dot button {
+.Product .slider_and_description .sliderContainer .react-multi-carousel-dot button {
   padding: 7px;
   background: rgba(255, 255, 255, 0.2);
   border: solid rgba(104, 103, 103, 0.2) 2px;
 }
-.Product .sliderContainer .react-multi-carousel-dot--active button {
+.Product .slider_and_description .sliderContainer .react-multi-carousel-dot--active button {
   background: rgba(255, 255, 255, 0.5);
   border: solid rgba(255, 255, 255, 0.2) 2px;
 }
-.Product .sliderContainer .react-multiple-carousel__arrow {
+.Product .slider_and_description .sliderContainer .react-multiple-carousel__arrow {
   z-index: 0;
 }
-.Product .sliderContainer .ButtonGroup {
+.Product .slider_and_description .sliderContainer .ButtonGroup {
   width: 30%;
   position: absolute;
   top: 0;
   left: 0;
 }
-.Product .sliderContainer .ButtonGroup .imgSelector {
+.Product .slider_and_description .sliderContainer .ButtonGroup .imgSelector {
   margin: 0 auto;
   width: 55%;
   display: flex;
@@ -376,83 +434,111 @@ body {
   justify-content: center;
   align-items: center;
 }
-.Product .sliderContainer .ButtonGroup .imgSelector button {
+.Product .slider_and_description .sliderContainer .ButtonGroup .imgSelector button {
   background-color: white;
   margin-bottom: 18%;
 }
-.Product .sliderContainer .ButtonGroup .imgSelector .active img {
+.Product .slider_and_description .sliderContainer .ButtonGroup .imgSelector .active img {
   box-shadow: 0px 0px 12px black;
 }
-.Product .description {
+.Product .slider_and_description .description {
   padding: 40px 60px;
 }
-.Product .description .name {
+.Product .slider_and_description .description .name {
   font-size: 35px;
 }
-.Product .description .price {
+.Product .slider_and_description .description .price {
   font-size: 20px;
   font-weight: 900;
   border-bottom: gray solid 1px;
   padding-bottom: 20px;
 }
-.Product .description .addToCart {
+.Product .slider_and_description .description .addToCart {
   text-align: center;
 }
-.Product .description .addToCart button {
+.Product .slider_and_description .description .addToCart button {
   margin-top: 30px;
   background-color: black;
   padding: 10px 30px;
   font-size: 17px;
 }
-.Product .description .textDescription {
+.Product .slider_and_description .description .textDescription {
   margin-top: 50px;
 }
-.Product .description .textDescription .title {
+.Product .slider_and_description .description .textDescription .title {
   display: inline-block;
   border-bottom: black solid 2px;
   font-size: 19px;
   font-weight: 900;
   text-transform: uppercase;
 }
-.Product .description .textDescription .text {
+.Product .slider_and_description .description .textDescription .text {
   margin-top: 20px;
 }
-.Product .description .inCart {
+.Product .slider_and_description .description .inCart {
   margin-top: 40px;
   text-align: center;
 }
-.Product .description .inCart button {
+.Product .slider_and_description .description .inCart button {
   background-color: black;
+  color: white;
 }
-.Product .description .inCart .addToCart {
-  padding: 10px 30px;
+.Product .slider_and_description .description .inCart .changeQuantity {
+  margin-bottom: 20px;
 }
-.Product .description .inCart .changeQuantity button {
+.Product .slider_and_description .description .inCart .changeQuantity button {
   height: 32px;
   width: 32px;
   border-radius: 50%;
   padding: 0;
   margin: 5px 5px;
-}
-.Product .description .inCart .changeQuantity .quantity {
   font-size: 25px;
 }
-.Product .description .inCart .remove {
-  padding: 10px 30px;
-  margin: 10px 5px;
+.Product .slider_and_description .description .inCart .changeQuantity .quantity {
+  font-size: 25px;
 }
-.Product .carusel {
-  outline: blue solid 1px;
+.Product .otherProductsCarusel {
+  margin: 0 auto;
+  margin-top: 100px;
   width: 90%;
 }
-.Product .carusel img {
-  width: 50px;
+.Product .otherProductsCarusel .head {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin: 20px;
 }
-.Product .carusel .ProductsCarusel {
-  outline: black solid 1px;
-  margin: 0 auto;
-  margin-top: 70px;
-  width: 85%;
+.Product .otherProductsCarusel .carusel .link img {
+  width: 100%;
+  border-radius: 10px;
+}
+.Product .otherProductsCarusel .carusel .productContainer {
+  float: right;
+}
+.Product .otherProductsCarusel .carusel .productContainer .product {
+  width: 70%;
+  margin-left: auto;
+}
+.Product .otherProductsCarusel .carusel .react-multiple-carousel__arrow {
+  z-index: 0;
+  border-radius: 0px;
+  top: 0%;
+  height: 100%;
+  background-color: white;
+}
+.Product .otherProductsCarusel .carusel .react-multiple-carousel__arrow::before {
+  color: black;
+  z-index: 2;
+  font-size: 30px;
+}
+.Product .otherProductsCarusel .carusel .react-multiple-carousel__arrow--left {
+  left: 0px;
+  padding-right: 0px;
+}
+.Product .otherProductsCarusel .carusel .react-multiple-carousel__arrow--right {
+  right: 0px;
+  padding-left: 50px;
 }
 
 .About {
@@ -507,6 +593,16 @@ body {
     width: 30px;
     padding: 0;
   }
+  .Home .ProductsCarusel {
+    width: 100%;
+  }
+  .Home .ProductsCarusel .carusel .test .productContainer .product {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .Home .ProductsCarusel .carusel .test .productContainer .product img {
+    border-radius: 10px;
+  }
   .MobileMenuTab {
     position: fixed;
     top: 0;
@@ -554,7 +650,7 @@ body {
     padding: 15px 65px;
   }
   .ShoppingCart {
-    outline: green solid 1px;
+    font-size: 20px;
   }
   .ShoppingCart .tab {
     font-size: 20px;
@@ -563,50 +659,55 @@ body {
     padding: 18px 20px;
   }
   .ShoppingCart .tab .CartItem {
-    font-size: 15px;
+    font-size: 20px;
   }
   .ShoppingCart .tab .CartItem .left .name {
     margin-left: 10px;
   }
   .ShoppingCart .tab .CartItem .left .name span,
 .ShoppingCart .tab .CartItem .left .name .itemPrice {
-    font-size: 12px;
+    font-size: 15px;
   }
   .ShoppingCart .tab .CartItem img {
     width: 85px;
     height: 85px;
   }
-  .Product {
+  .Product .slider_and_description {
     display: block;
   }
-  .Product .sliderContainer .slider {
+  .Product .slider_and_description .sliderContainer .slider {
     position: relative;
     float: none;
     margin: 0 auto;
   }
-  .Product .sliderContainer .slider .counter {
+  .Product .slider_and_description .sliderContainer .slider .counter {
     display: block;
     position: absolute;
-    top: 20px;
-    right: 30px;
-    background-color: rgba(120, 120, 120, 0.6);
+    top: 17px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 25px;
     padding: 5px 15px;
-    color: white;
+    color: rgb(40, 40, 40);
+    color: black;
+    font-weight: 400;
     letter-spacing: 1.9px;
   }
-  .Product .sliderContainer .ButtonGroup {
+  .Product .slider_and_description .sliderContainer .ButtonGroup {
     top: 0;
     right: 0;
     width: 100%;
   }
-  .Product .sliderContainer .ButtonGroup .imgSelector {
+  .Product .slider_and_description .sliderContainer .ButtonGroup .imgSelector {
     display: none;
   }
-  .Product .sliderContainer .ButtonGroup .imgSelector .counter {
+  .Product .slider_and_description .sliderContainer .ButtonGroup .imgSelector .counter {
     display: block;
   }
-  .Product .description {
+  .Product .slider_and_description .description {
     padding: 40px 16%;
+  }
+  .Product .otherProductsCarusel {
+    width: 100%;
   }
 }

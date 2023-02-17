@@ -14,10 +14,9 @@ $fourth-color: #00C9A7;
 
 button {
     font-family: "Helvetica Neue W31","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: 0.06em;
-    letter-spacing: 1.1px;
+    // font-weight: 300;
+    // line-height: 1.2;
+    letter-spacing: 1.2px;
 
     // background-color: $fourth-color;
     border: none;
@@ -27,12 +26,24 @@ button {
 
     font-family: "Helvetica Neue W31","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 13px;
+    background-color: black;
+
+}
 
 
+.add_to_cart_btn{
+    border-radius: 7px;
+
+    background-color: black;
+    margin: 0px auto;
+    padding: 9px 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
 
     &:hover {
         cursor: pointer;
-        background: lighten($fourth-color, 3%)
+        background: rgb(60,60,60)
     }
 }
 
