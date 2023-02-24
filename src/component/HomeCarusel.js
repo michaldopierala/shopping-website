@@ -51,7 +51,7 @@ export default function HomeCarusel() {
 
             
               <div className='container'> <img src="../img/pexel.jpg" />  <a className='text' href="https://www.w3schools.com" >Find out more </a></div>
-              <div className='container'> <img src="../img/home22.jpeg" /> <a className='text' href="https://www.w3schools.com" >Find out more </a></div>
+              <div className='container'> <img src="../img/pinaple.jpg" /> <a className='text' href="https://www.w3schools.com" >Find out more </a></div>
                
                 
                 {/* <div className='item'>Item 1</div>

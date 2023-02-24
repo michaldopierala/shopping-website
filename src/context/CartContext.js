@@ -73,6 +73,7 @@ export default function CartContext({ children }) {
                 closeCart,
                 CartQuantity,
                 cartOpen,
+                setCartOpen,
                 cartItems
             }}>
             {children}

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { ShoppingCartContext } from '../context/CartContext'
 import CartItem from './CartItem'
 import products from '../data/products.json'
@@ -26,6 +27,9 @@ export default function ShoppingCart() {
                     }, 0)}
                     </div>
                     : null}
+
+                    <Link to={`/checkout`} className='add_to_cart_btn checkout'>Checkout 2</Link>
+
             </div>
 
         </div>

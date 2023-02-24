@@ -377,6 +377,14 @@ body {
   text-align: center;
   margin-top: 30vh;
 }
+.ShoppingCart .tab .checkout {
+  margin-top: 90px;
+  width: 80%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 18px;
+  letter-spacing: 1.9px;
+}
 
 .Store {
   display: grid;
@@ -543,6 +551,40 @@ body {
 
 .About {
   padding-top: 200px;
+}
+
+.Checkout {
+  padding: 100px 50px;
+}
+.Checkout .header {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px;
+  font-size: 30px;
+}
+.Checkout .columnContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.Checkout .columnContainer .column1 .address {
+  background-color: rgb(247, 247, 247);
+  padding: 20px;
+}
+.Checkout .columnContainer .column2 {
+  background-color: rgb(247, 247, 247);
+  border-radius: 5px;
+  padding: 20px;
+}
+.Checkout .columnContainer .column2 .cartEmpty {
+  text-align: center;
+  margin-top: 30vh;
+}
+
+.PaymentSucces {
+  padding: 200px;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 2px;
 }
 
 .Footer {
