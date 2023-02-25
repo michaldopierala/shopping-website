@@ -32,6 +32,7 @@ export default function Checkout() {
             )
 
             : <div className='cartEmpty'> Cart is empty </div>}
+            <div className='total'> Tota:</div>
 
         </div>
       </div>

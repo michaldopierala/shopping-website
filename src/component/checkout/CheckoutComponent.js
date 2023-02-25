@@ -21,12 +21,12 @@ export default function CheckoutComponent() {
         fetch("http://localhost/checkout.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            // body: JSON.stringify({ items: cartItems }),
+            body: JSON.stringify({ items: cartItems }),
             // body: JSON.stringify(cartItems),
 
           })
           .then((res) => res.json())
-          .then((data) => setClientSecret(data.clientSecret));
+          .then((data) => setClientSecret(data.clientSecret))
       }, []);
 
 

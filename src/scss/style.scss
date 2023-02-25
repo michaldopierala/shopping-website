@@ -639,14 +639,30 @@ body {
             }
         }
         .column2{
+            margin:0px 10px ;
+            margin-right: 20px;
             background-color: rgb(247, 247, 247);
             border-radius: 5px;
             padding: 20px;
+
+            .Product{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 15px;
+                // align-items: baseline;
+                // align-content: center;
+            }
 
 
             .cartEmpty {
                 text-align: center;
                 margin-top: 30vh;
+            }
+
+            .total{
+                margin-top: 40px ;
+                font-weight: bold;
+                text-align: right;
             }
         }
     }

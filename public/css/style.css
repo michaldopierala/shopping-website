@@ -571,13 +571,25 @@ body {
   padding: 20px;
 }
 .Checkout .columnContainer .column2 {
+  margin: 0px 10px;
+  margin-right: 20px;
   background-color: rgb(247, 247, 247);
   border-radius: 5px;
   padding: 20px;
 }
+.Checkout .columnContainer .column2 .Product {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
 .Checkout .columnContainer .column2 .cartEmpty {
   text-align: center;
   margin-top: 30vh;
+}
+.Checkout .columnContainer .column2 .total {
+  margin-top: 40px;
+  font-weight: bold;
+  text-align: right;
 }
 
 .PaymentSucces {
