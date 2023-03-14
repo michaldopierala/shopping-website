@@ -50,8 +50,8 @@ export default function HomeCarusel() {
                 {/* {products.map( (item,index)=>  <img key={index} src={item.imgUrl[0]} /> )} */}
 
             
-              <div className='container'> <img src="../img/pexel.jpg" />  <a className='text' href="https://www.w3schools.com" >Find out more </a></div>
-              <div className='container'> <img src="../img/pinaple.jpg" /> <a className='text' href="https://www.w3schools.com" >Find out more </a></div>
+              <div className='container'> <img src="../img/pinaple1.jpg" />  <a className='text' href="https://www.w3schools.com" >Find out more </a></div>
+              <div className='container'> <img src="../img/pexel1.jpg" /> <a className='text' href="https://www.w3schools.com" >Find out more </a></div>
                
                 
                 {/* <div className='item'>Item 1</div>

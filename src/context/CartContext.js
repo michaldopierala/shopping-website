@@ -12,7 +12,7 @@ export const ShoppingCartContext = createContext()
 export default function CartContext({ children }) {
 
     const [cartItems, setCartItems] = useLocalStorage('name', [])
-    // const [cartItems, setCartItems] = useState([])
+
 
     const [cartOpen, setCartOpen] = useState(false)
 

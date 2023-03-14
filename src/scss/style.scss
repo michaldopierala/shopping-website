@@ -77,7 +77,7 @@ body {
 
     .cartIcon {
         all: unset;
-        width: 27px;
+        width: 31px;
         position: absolute;
         top: 22px;
         right: 70px;
@@ -93,12 +93,12 @@ body {
 
         .cartCount {
             position: absolute;
-            top: -15px;
-            right: -12px;
+            top: -10px;
+            right: -10px;
             color: white;
             background-color: red;
-            height: 23px;
-            width: 23px;
+            height: 21px;
+            width: 21px;
             border-radius: 50%;
             display: grid;
             place-items: center;
@@ -145,11 +145,13 @@ body {
             }
 
             .text {
+                font-family: Arial, Helvetica, sans-serif;
                 position: absolute;
                 bottom: 20%;
-                left: 10%;
-                color: white;
+                left: 15%;
+                color: rgb(20, 20, 20);
                 font-size: 50px;
+                font-weight: 400;
                 text-decoration: none;
 
             }
@@ -160,14 +162,15 @@ body {
     .ProductsCarusel {
         border-top: rgb(100, 100, 100) solid .5px;
         margin: 0 auto;
-        margin-top: 70px;
+        margin-top: 100px;
         width: 85%;
 
         .recomended {
             text-transform: uppercase;
             text-align: center;
-            margin: 20px;
-            font-size: 20px;
+            margin: 15px;
+            margin-top: 70px;
+            font-size: 25px;
             letter-spacing: 2px;
         }
 
@@ -183,12 +186,20 @@ body {
 
                     .product {
                         width: 80%;
-                        font-size: 20px;
+                        letter-spacing: 1;
+
+                        .name {
+                            padding-top: 10px;
+                            font-size: 18px;
+                            font-weight: 400;
+                        }
 
                         .price {
                             margin-top: 7px;
-                            font-size: 17px;
-                            color: rgb(120, 120, 120);
+                            font-size: 16px;
+                            color: rgb(90, 90, 90);
+                            letter-spacing: 1;
+
                         }
 
                         // button {
@@ -367,16 +378,19 @@ body {
             margin-top: 30vh;
         }
 
-        .checkout{
-            // text-align: center;
-            // margin: 0px auto;
-            margin-top: 90px;
-            width: 80%;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            font-size: 18px;
-            letter-spacing: 1.9px;
+        .checkoutContainer {
+            margin-top: 100px;
+            text-align: center;
         }
+
+        .checkout {
+            font-size: 16px;
+            padding: 15px;
+            padding-left: 100px;
+            padding-right: 100px;
+            letter-spacing: 2px;
+        }
+
     }
 
 
@@ -613,10 +627,10 @@ body {
     padding-top: 200px;
 }
 
-.Checkout{
+.Checkout {
     padding: 100px 50px;
 
-    .header{
+    .header {
         text-align: center;
         text-transform: uppercase;
         margin: 20px;
@@ -625,27 +639,120 @@ body {
 
 
 
-    .columnContainer{
+    .columnContainer {
         display: grid;
         grid-template-columns: 2fr 1fr;
 
-        .column1{
+        .column1 {
             // outline: auto;
-            // padding: 40px;
+            padding: 40px;
 
-            .address{
+            .head {
+                // text-align: center;
+                margin: 20px 40px;
+                font-size: 23px;
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+
+            .address {
+                padding: 25px;
+                border-radius: 10px;
+                margin-bottom: 80px;
                 background-color: rgb(247, 247, 247);
-                padding: 20px;
+
+                form {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-row-gap: 20px;
+                    grid-column-gap: 20px;
+
+                    .item3 {
+                        grid-column: 1 / 3;
+                    }
+
+                    label {
+                        // margin: 5px;
+                        // margin: 10px;
+
+                        input {
+                            box-sizing: border-box;
+                            width: 100%;
+                            padding: 10px;
+                            border: 0.5px solid rgb(220, 220, 220);
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+
+            .loader {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 50px;
+
+
+                svg {
+                    width: 150px;
+                    height: 150px;
+                    animation: rotate 1.7s linear infinite;
+
+                    @keyframes rotate {
+                        0%
+                         {
+                            transform: rotate(0deg);
+                        }
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+
+                    circle {
+                        width: 100%;
+                        height: 100%;
+                        fill: none;
+                        stroke-width: 5;
+                        stroke: rgb(210,210,210);
+                        stroke-linecap: round;
+                        transform: translate(5px, 5px);
+                        stroke-dasharray: 440;
+                        stroke-dashoffset: 440;
+                        animation: animate 2s linear infinite;
+                    }
+
+                    @keyframes animate {
+                        0%, 100%
+                         {
+                            stroke-dashoffset: 440;
+                        }
+                        50% {
+                            stroke-dashoffset: 0;
+                        }
+                        50.1% {
+                            stroke-dashoffset: 880;
+                        }
+                    }
+                }
+            }
+
+
+            .Stripe {
+                @import 'stripe';
+
             }
         }
-        .column2{
-            margin:0px 10px ;
+
+
+
+        .column2 {
+            margin: 0px 10px;
             margin-right: 20px;
             background-color: rgb(247, 247, 247);
             border-radius: 5px;
             padding: 20px;
 
-            .Product{
+            .Product {
                 display: flex;
                 justify-content: space-between;
                 margin-top: 15px;
@@ -659,19 +766,19 @@ body {
                 margin-top: 30vh;
             }
 
-            .total{
-                margin-top: 40px ;
+            .total {
+                margin-top: 40px;
                 font-weight: bold;
                 text-align: right;
             }
         }
     }
- 
+
 
 }
 
 
-.PaymentSucces{
+.PaymentSucces {
     padding: 200px;
     text-align: center;
     font-size: 40px;

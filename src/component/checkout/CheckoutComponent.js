@@ -9,43 +9,45 @@ import { ShoppingCartContext } from '../../context/CartContext'
 const stripePromise = loadStripe("pk_test_ucVqsBwK0IGPoRLxj24fS1l4");
 
 
-export default function CheckoutComponent() {
+export default function CheckoutComponent(props) {
 
-    const { cartItems  } = useContext(ShoppingCartContext)
+  const { cartItems } = useContext(ShoppingCartContext)
+  const [clientSecret, setClientSecret] = useState("");
 
-    const [clientSecret, setClientSecret] = useState("");
+// console.log( JSON.stringify({ items: cartItems }));
+  useEffect(() => {
+    // Create PaymentIntent as soon as the page loads
+    fetch("https://afterglowfashion.com/server/stripe_intent.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify( 2500 ),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setClientSecret(data.clientSecret);
+        props.changeTotal(data.total);
+        console.log(data.test)
+      })
+  }, []);
 
-    useEffect(() => {
-      // console.log(cartItems)
-        // Create PaymentIntent as soon as the page loads
-        fetch("http://localhost/checkout.php", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ items: cartItems }),
-            // body: JSON.stringify(cartItems),
 
-          })
-          .then((res) => res.json())
-          .then((data) => setClientSecret(data.clientSecret))
-      }, []);
-
-
-      const appearance = {
-        theme: 'stripe',
-      };
-      const options = {
-        clientSecret,
-        appearance,
-      };
+  const appearance = {
+    theme: 'stripe',
+  };
+  const options = {
+    clientSecret,
+    appearance,
+  };
 
 
   return (
-    <div className="App">
-    {clientSecret && (
-      <Elements options={options} stripe={stripePromise}>
-        <CheckoutForm />
-      </Elements>
-    )}
-  </div>
+    <div className="Stripe">
+
+      {clientSecret && (
+        <Elements options={options} stripe={stripePromise}>
+          <CheckoutForm />
+        </Elements>
+      )}
+    </div>
   )
 }

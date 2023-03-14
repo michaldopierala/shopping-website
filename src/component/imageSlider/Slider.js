@@ -5,7 +5,7 @@ import products from '../../data/products.json'
 import ButtonGroup from './ImgButtons';
 
 
-export default function Slider({id, name, imgUrl}) {
+export default function Slider({ id, name, imgUrl }) {
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -24,44 +24,27 @@ export default function Slider({id, name, imgUrl}) {
         }
     }
 
- 
+
 
     return (
-        // <div className='Slider'>
-            <Carousel
-                className='Carousel'
-                arrows={true}
-                renderButtonGroupOutside={true}
-                customButtonGroup={<ButtonGroup img={imgUrl} />}
+        <Carousel
+            className='Carousel'
+            arrows={true}
+            renderButtonGroupOutside={true}
+            customButtonGroup={<ButtonGroup img={imgUrl} />}
+            swipeable={true}
+            draggable={true}
+            showDots={true}
+            responsive={responsive}
+            ssr={true} // means to render carousel on server-side.
+            infinite={true}
+            keyBoardControl={true}
+            removeArrowOnDeviceType={["mobile"]}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+        >
+            {imgUrl.map((item, index) => <img key={index} src={imgUrl[index]} />)}
+        </Carousel>
 
-                swipeable={true}
-                draggable={true}
-                showDots={true}
-                responsive={responsive}
-                ssr={true} // means to render carousel on server-side.
-                infinite={true}
-                // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                // autoPlaySpeed={1000}
-                keyBoardControl={true}
-                    //  customTransition="all .5"
-                    //  transitionDuration={500}
-                    //   containerClass="carousel-container"
-                removeArrowOnDeviceType={["mobile"]}
-                // deviceType={this.props.deviceType}
-                dotListClass="custom-dot-list-style"
-                    itemClass="carousel-item-padding-40-px"
-
-
-                // customDot={<CustomDot />}
-            >
-                {imgUrl.map((item, index)=><img key={index} src={imgUrl[index]}/>)}
-                {/* <div className='test'>Item 1 </div>
-                <div className='test'>Item 2 </div>
-                <div className='test'>Item 3 </div>
-                <div className='test'>Item 4 </div> */}
-
-            </Carousel>
-
-        // </div>
     )
 }

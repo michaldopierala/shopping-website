@@ -27,8 +27,9 @@ export default function ShoppingCart() {
                     }, 0)}
                     </div>
                     : null}
-
-                    <Link to={`/checkout`} className='add_to_cart_btn checkout'>Checkout 2</Link>
+                <div className='checkoutContainer'>
+                    <Link to={`/checkout`} className='add_to_cart_btn checkout'>Checkout</Link>
+                </div>
 
             </div>
 
