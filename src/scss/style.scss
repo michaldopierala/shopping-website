@@ -118,6 +118,27 @@ body {
 
     .homeCarusel {
 
+        .container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            
+
+            .backGroundImg {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50% 50%;
+            }
+
+            .text {
+                position: absolute;
+                bottom: 25%;
+                left: 15%;
+                width: 40vw;
+            }
+        }
+
         .react-multi-carousel-dot {
             padding-bottom: 40px;
 
@@ -136,27 +157,6 @@ body {
         .react-multiple-carousel__arrow {
             z-index: 0;
         }
-
-        .container {
-            position: relative;
-
-            img {
-                width: 100%;
-            }
-
-            .text {
-                font-family: Arial, Helvetica, sans-serif;
-                position: absolute;
-                bottom: 20%;
-                left: 15%;
-                color: rgb(20, 20, 20);
-                font-size: 50px;
-                font-weight: 400;
-                text-decoration: none;
-
-            }
-        }
-
     }
 
     .ProductsCarusel {
@@ -164,81 +164,83 @@ body {
         margin: 0 auto;
         margin-top: 100px;
         width: 85%;
+        margin-bottom: 200px;
 
         .recomended {
             text-transform: uppercase;
             text-align: center;
-            margin: 15px;
-            margin-top: 70px;
+            margin: 55px;
+            margin-top: 30px;
             font-size: 25px;
             letter-spacing: 2px;
         }
 
         .carusel {
 
-            .test {
-                padding: 30px 200px;
-                padding-left: 100px;
-                padding-right: 0px;
+            .productContainer {
+                padding: 10px;
+                letter-spacing: 1.3px;
 
-                .productContainer {
-                    letter-spacing: 1.3px;
+                .product {
+                    box-shadow: 0px 0px 5px 2px rgba(120, 120, 120, 0.3);
+                    width: 80%;
+                    letter-spacing: 1;
 
-                    .product {
-                        width: 80%;
+                    .name {
+                        text-align: center;
+                        padding-top: 10px;
+                        font-size: 20px;
+                        // font-weight: 400;
+                    }
+
+                    .price {
+                        text-align: center;
+                        padding: 2px 0px 15px 0px;
+                        // font-weight: 400;
+
+                        font-size: 15px;
+                        color: rgb(90, 90, 90);
                         letter-spacing: 1;
+                    }
 
-                        .name {
-                            padding-top: 10px;
-                            font-size: 18px;
-                            font-weight: 400;
-                        }
+                    img {
+                        width: 100%;
+                    }
 
-                        .price {
-                            margin-top: 7px;
-                            font-size: 16px;
-                            color: rgb(90, 90, 90);
-                            letter-spacing: 1;
-
-                        }
-
-                        // button {
-                        //     height: 200px;
-                        //     overflow: hidden;
-                        //     padding: 0;
-                        //     border-radius: 10px;
-                        // }
-
-                        img {
-                            width: 100%;
-                        }
+                    &:hover {
+                        cursor: pointer;
+                        -webkit-transform: scale(1.03);
+                        transform: scale(1.03);
                     }
                 }
+            }
 
-                .react-multiple-carousel__arrow {
-                    z-index: 0;
-                    position: absolute;
-                    border-radius: 0px;
-                    top: 0%;
-                    height: 100%;
+            .react-multiple-carousel__arrow {
+                background-color: rgba(white, 0.7);
+
+                &:hover {
                     background-color: white;
                 }
+            }
 
-                .react-multiple-carousel__arrow::before {
-                    color: black;
-                    z-index: 2;
-                    font-size: 30px;
-                }
+            .react-multiple-carousel__arrow::before {
+                color: rgb(24, 22, 22);
+                z-index: 2;
+                font-size: 25px;
+            }
 
-                .react-multiple-carousel__arrow--left {
-                    left: 0px;
-                    padding-right: 50px;
-                }
+            .react-multiple-carousel__arrow:hover {
+                color: red;
+            }
 
-                .react-multiple-carousel__arrow--right {
-                    right: 0px;
-                    padding-left: 50px;
-                }
+            .react-multiple-carousel__arrow--left {
+                left: 0px;
+                margin-left: 14px;
+            }
+
+            .react-multiple-carousel__arrow--right {
+                right: 0px;
+                margin-right: 10px;
             }
         }
     }
@@ -402,15 +404,16 @@ body {
 .Store {
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
-    grid-gap: 50px;
+    grid-gap: 20px 70px;
     justify-content: space-around;
     padding: 70px;
-    padding-top: 200px;
+    padding-top: 170px;
 
 }
 
 
 .Product {
+    letter-spacing: 0.06rem;
 
 
     .slider_and_description {
@@ -474,89 +477,112 @@ body {
                     }
 
                     .active img {
-                        box-shadow: 0px 0px 12px black;
+                        box-shadow: 0px 0px 10px 4px rgba(80, 80, 80, 0.7);
+
                     }
                 }
             }
 
         }
 
-        .description {
+        .descriptionColumn {
             padding: 40px 60px;
 
             .name {
-                font-size: 35px;
-
+                font-size: 30px;
+                font-weight: 400;
             }
 
             .price {
-                font-size: 20px;
-                font-weight: 900;
+                margin-top: 15px;
+                font-size: 25px;
+                font-weight: 400;
                 border-bottom: gray solid 1px;
                 padding-bottom: 20px;
-
+                color: rgb(110, 110, 110);
             }
 
-            .addToCart {
+            .changeQuantity {
+                margin-top: 40px;
                 text-align: center;
 
-                button {
-                    margin-top: 30px;
-                    background-color: black;
-                    padding: 10px 30px;
-                    font-size: 17px;
+                .addToCartBtn {
+                    background-color: rgb(24, 22, 22);
+                    color: white;
+                    max-width: 400px;
+                    width: 100%;
+                    padding: 15px;
+                    font-size: 14px;
+                    letter-spacing: 1.3px;
+                    border-radius: 5px;
+                    text-transform: uppercase;
+                }
+
+                .inCart {
+
+                    .changeInCart {
+                        font-size: 16px;
+                        border: solid rgb(130, 130, 130) 0.5px;
+                        display: inline-flex;
+                        margin-bottom: 10px;
+
+                        button {
+                            all: unset;
+                            width: 32px;
+                            height: 32px;
+                            text-align: center;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+
+                        span {
+                            all: unset;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 50px;
+                            border-left: solid rgb(130, 130, 130) 0.5px;
+                            border-right: solid rgb(130, 130, 130) 0.5px;
+                        }
+                    }
+
+                    .remove {
+                        all: unset;
+                        display: block;
+                        margin: 0 auto;
+                        margin-top: 8px;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        letter-spacing: 1.5px;
+                        text-decoration: underline;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
 
             .textDescription {
                 margin-top: 50px;
 
-
                 .title {
                     display: inline-block;
                     border-bottom: black solid 2px;
                     font-size: 19px;
-                    font-weight: 900;
+                    font-weight: 500;
                     text-transform: uppercase;
                 }
 
                 .text {
                     margin-top: 20px;
-                }
-            }
-
-            .inCart {
-                margin-top: 40px;
-                text-align: center;
-
-                button {
-                    background-color: black;
-                    color: white;
-                }
-
-
-
-                .changeQuantity {
-                    margin-bottom: 20px;
-
-                    button {
-                        height: 32px;
-                        width: 32px;
-                        border-radius: 50%;
-                        padding: 0;
-                        margin: 5px 5px;
-                        font-size: 25px;
-                    }
-
-                    .quantity {
-                        font-size: 25px;
-                    }
+                    font-size: 16px;
                 }
             }
         }
     }
-
-
 
     .otherProductsCarusel {
         margin: 0 auto;
@@ -566,59 +592,60 @@ body {
         .head {
             text-align: center;
             text-transform: uppercase;
-            font-size: 20px;
-            letter-spacing: 2px;
             margin: 20px;
+            margin-bottom: 40px;
+            font-size: 25px;
+            letter-spacing: 2px;
         }
 
         .carusel {
-
-            .link {
-
-                img {
-                    width: 100%;
-                    border-radius: 10px;
-                }
-            }
-
-
             .productContainer {
-                float: right;
+                padding: 0 2vw;
 
                 .product {
-                    width: 70%;
-                    margin-left: auto;
+                    img {
+                        width: 100%;
+                        border-radius: 6px;
+                    }
+
+                    .name {
+                        font-size: 18px;
+                    }
+
+                    .price {
+                        font-size: 15px;
+                        color: rgb(90, 90, 90);
+                    }
                 }
             }
 
             .react-multiple-carousel__arrow {
                 z-index: 0;
                 // position: absolute;
-                border-radius: 0px;
-                top: 0%;
-                height: 100%;
-                background-color: white;
+                // border-radius: 0px;
+                // top: 0%;
+                // height: 100%;
+                // background-color: rgba(60, 60, 60, 0.4);
+                background-color: rgba(240, 240, 240, 0.7);
             }
 
             .react-multiple-carousel__arrow::before {
+                // color: white;
                 color: black;
                 z-index: 2;
-                font-size: 30px;
+                // font-size: 30px;
             }
 
             .react-multiple-carousel__arrow--left {
-                left: 0px;
-                padding-right: 0px;
+                // left: 0px;
+                // padding-right: 0px;
             }
 
             .react-multiple-carousel__arrow--right {
-                right: 0px;
-                padding-left: 50px;
+                // right: 0px;
+                // padding-left: 50px;
             }
         }
-
-
-
     }
 }
 
@@ -628,13 +655,18 @@ body {
 }
 
 .Checkout {
-    padding: 100px 50px;
+    letter-spacing: 0.06rem;
 
     .header {
         text-align: center;
-        text-transform: uppercase;
-        margin: 20px;
-        font-size: 30px;
+        padding: 30px;
+        border-bottom: rgb(220, 220, 220) solid 1px;
+        box-shadow: 0px 0px 5px #888888;
+
+        // background-color: rgb(245, 245, 245);
+        img {
+            width: 200px;
+        }
     }
 
 
@@ -642,15 +674,20 @@ body {
     .columnContainer {
         display: grid;
         grid-template-columns: 2fr 1fr;
+        background-color: rgb(250, 250, 250);
 
         .column1 {
-            // outline: auto;
-            padding: 40px;
+            padding: 20px 50px;
+            padding-bottom: 300px;
+
+            // box-shadow: 0px 0px 5px rgb(220, 220, 220);
+            border-radius: 10px;
+
 
             .head {
                 // text-align: center;
-                margin: 20px 40px;
-                font-size: 23px;
+                margin: 20px 0px;
+                font-size: 18px;
                 text-transform: uppercase;
                 font-weight: 400;
             }
@@ -658,28 +695,30 @@ body {
             .address {
                 padding: 25px;
                 border-radius: 10px;
-                margin-bottom: 80px;
-                background-color: rgb(247, 247, 247);
+                margin-bottom: 50px;
+                background-color: white;
+                box-shadow: 0px 0px 3px rgb(220, 220, 220);
 
                 form {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
-                    grid-row-gap: 20px;
-                    grid-column-gap: 20px;
+                    grid-row-gap: 0px;
+                    grid-column-gap: 15px;
 
                     .item3 {
                         grid-column: 1 / 3;
                     }
 
                     label {
-                        // margin: 5px;
+                        margin: 5px;
                         // margin: 10px;
 
                         input {
                             box-sizing: border-box;
                             width: 100%;
                             padding: 10px;
-                            border: 0.5px solid rgb(220, 220, 220);
+                            margin-top: 5px;
+                            border: 1px solid rgb(210, 210, 210);
                             border-radius: 5px;
                         }
                     }
@@ -699,10 +738,10 @@ body {
                     animation: rotate 1.7s linear infinite;
 
                     @keyframes rotate {
-                        0%
-                         {
+                        0% {
                             transform: rotate(0deg);
                         }
+
                         100% {
                             transform: rotate(360deg);
                         }
@@ -713,7 +752,7 @@ body {
                         height: 100%;
                         fill: none;
                         stroke-width: 5;
-                        stroke: rgb(210,210,210);
+                        stroke: rgb(210, 210, 210);
                         stroke-linecap: round;
                         transform: translate(5px, 5px);
                         stroke-dasharray: 440;
@@ -722,13 +761,16 @@ body {
                     }
 
                     @keyframes animate {
-                        0%, 100%
-                         {
+
+                        0%,
+                        100% {
                             stroke-dashoffset: 440;
                         }
+
                         50% {
                             stroke-dashoffset: 0;
                         }
+
                         50.1% {
                             stroke-dashoffset: 880;
                         }
@@ -746,18 +788,44 @@ body {
 
 
         .column2 {
-            margin: 0px 10px;
-            margin-right: 20px;
-            background-color: rgb(247, 247, 247);
-            border-radius: 5px;
-            padding: 20px;
+            padding: 20px 50px;
+            // box-shadow: -10px 0px 5px rgb(220, 220, 220);
+            border-left: solid 1px rgb(230, 230, 230);
+            background-color: white;
 
-            .Product {
+            .head {
+                text-align: center;
+                font-size: 18px;
+                text-transform: uppercase;
+                font-weight: 400;
+                margin-bottom: 70px;
+
+            }
+
+            .ProductComponent {
                 display: flex;
-                justify-content: space-between;
+                // justify-content: space-between;
                 margin-top: 15px;
-                // align-items: baseline;
-                // align-content: center;
+
+                .product{
+                    margin-right: 40px;
+                    font-size: 20px;
+                    // font-weight: 400;
+                    .quantity{
+                        color: #888888;
+                        font-size: 15px;
+                    }
+                    .productPrice{
+                        color: #888888;
+                        font-size: 15px;
+
+                    }
+                }
+
+                .productTotal{
+                    font-size: 20px;
+                }
+
             }
 
 
@@ -768,8 +836,12 @@ body {
 
             .total {
                 margin-top: 40px;
-                font-weight: bold;
-                text-align: right;
+                font-weight: 500;
+                font-size: 20px;
+                text-align: left;
+                border-top: #888888 solid 0.5px;
+                padding-top: 20px;
+                margin-top: 70px;
             }
         }
     }
@@ -786,9 +858,10 @@ body {
 }
 
 .Footer {
-    background-color: black;
+
+    background-color: rgb(25, 22, 22);
     color: white;
-    margin-top: 200px;
+    // margin-top: 100px;
     height: 200px;
     display: grid;
     // justify-content: center;

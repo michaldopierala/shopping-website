@@ -1,3 +1,65 @@
+.Home {
+  @media only screen and (max-width: 1350px) {
+    .homeCarusel {
+      .container {
+        height: 400px;
+
+        .backGroundImg {
+          object-position: 70% 50%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1110px) {
+    .homeCarusel {
+      .container {
+        .backGroundImg {
+          object-position: 70% 50%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1050px) {
+    .homeCarusel {
+      .container {
+        height: 300px;
+
+        .text {
+          width: 50vw;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .homeCarusel {
+      .container {
+        height: 250px;
+
+        .backGroundImg {
+          object-position: 75% 50%;
+        }
+
+        .text {
+          bottom: 40%;
+          left: 5%;
+          width: 60vw;
+        }
+
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
 @media only screen and (max-width: 600px) {
 
 
@@ -53,25 +115,17 @@
   }
 
   .Home {
+
     .ProductsCarusel {
       width: 100%;
 
-      .carusel {
-        .test {
-          .productContainer {
-
-            .product {
-              width: 70%;
-              margin: 0 auto;
-
-              // outline: red solid 1px;
-              img {
-                border-radius: 10px;
-              }
-            }
-          }
-        }
+      .recomended {
+        margin: 27px;
+        margin-top: 25px;
+        font-size: 22px;
       }
+
+
 
     }
   }
@@ -187,7 +241,6 @@
       .sliderContainer {
 
         .slider {
-
           position: relative;
           float: none;
           margin: 0 auto;
@@ -201,7 +254,7 @@
             background-color: rgba(white, 0.3);
             border-radius: 25px;
             padding: 5px 15px;
-            color: rgb(40,40,40);
+            color: rgb(40, 40, 40);
             color: black;
             // font-weight: bold;
             font-weight: 400;
@@ -235,13 +288,10 @@
 
     }
 
-.otherProductsCarusel {
-  width: 100%;
-}
+    .otherProductsCarusel {
+      width: 100%;
+    }
 
 
   }
-
-
-
 }

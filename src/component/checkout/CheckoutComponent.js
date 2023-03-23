@@ -14,19 +14,20 @@ export default function CheckoutComponent(props) {
   const { cartItems } = useContext(ShoppingCartContext)
   const [clientSecret, setClientSecret] = useState("");
 
-// console.log( JSON.stringify({ items: cartItems }));
+  // console.log( JSON.stringify({ items: cartItems }));
   useEffect(() => {
+    // let obj2 = [{ id: 1, quantity: 3 }, { id: 2, quantity: 1 }];
     // Create PaymentIntent as soon as the page loads
-    fetch("https://afterglowfashion.com/server/stripe_intent.php", {
+    fetch("https://afterglowfashion.com/server/test.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify( 2500 ),
+      body: JSON.stringify([{ id: 1, quantity: 3 }, { id: 2, quantity: 1 }]),
     })
       .then((res) => res.json())
       .then((data) => {
         setClientSecret(data.clientSecret);
         props.changeTotal(data.total);
-        console.log(data.test)
+        console.log(data)
       })
   }, []);
 

@@ -11,16 +11,16 @@ export default function ProductsCarusel2() {
 
     const responsive = {
         desktop: {
-            breakpoint: { max: 3000, min: 1224 },
+            breakpoint: { max: 3000, min: 1000 },
             items: 5,
             slidesToSlide: 1,
-            partialVisibilityGutter: 60,
+            partialVisibilityGutter: 30,
         },
         tablet: {
-            breakpoint: { max: 1224, min: 600 },
-            items: 4,
+            breakpoint: { max: 1000, min: 600 },
+            items: 3,
             slidesToSlide: 1,
-            // partialVisibilityGutter: 30
+            partialVisibilityGutter: 30
         },
         mobile: {
             breakpoint: { max: 600, min: 0 },
@@ -33,7 +33,7 @@ export default function ProductsCarusel2() {
 
     return (
         <div className='carusel'>
-            <Carousel 
+            <Carousel
                 partialVisible={true}
                 swipeable={true}
                 draggable={true}
@@ -50,13 +50,17 @@ export default function ProductsCarusel2() {
             >
                 {/* {products.map((item) => <StoreItem key={item.id} {...item} />)} */}
 
-                {products.map((item, index) => <div key={index} className='productContainer'>
-                    <div className='product'>
-                        <Link to={`../product/${item.id} `} className='link'><img key={item.id} src={item.imgUrl[0]} /></Link>
-                        <div className='name'>{item.name} </div>
-                        <div className='price'>$ {item.price} </div>
-                    </div>
-                </div>)}
+                {products.map((item, index) =>
+                    <div key={index} className='productContainer'>
+                        <div className='product'>
+                            <Link to={`../product/${item.id} `}>
+                                <img key={item.id} src={item.imgUrl[0]} />
+                            </Link>
+                            <div className='name'>{item.name} </div>
+                            <div className='price'>$ {item.price} </div>
+                        </div>
+                    </div>)
+                }
 
             </Carousel>
 

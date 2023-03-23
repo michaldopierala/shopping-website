@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import React from 'react'
 import { ShoppingCartContext } from '../context/CartContext';
+import TestCheckout from "../component/TestCheckout";
+import Url from "../component/Url";
+
 
 export default function About() {
 
@@ -11,7 +14,10 @@ export default function About() {
 
   return (
   <div className="About">
-      <div> {display} </div>
+      <div> 
+        helo 
+        <Url/>
+      </div>
   </div>
 
   )

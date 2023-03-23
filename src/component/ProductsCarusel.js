@@ -11,29 +11,35 @@ export default function ProductsCarusel() {
 
     const responsive = {
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
+            breakpoint: { max: 3000, min: 1200 },
             items: 4,
             slidesToSlide: 1,
-            // partialVisibilityGutter: 60,
+            partialVisibilityGutter: 30,
         },
         tablet: {
-            breakpoint: { max: 1024, min: 600 },
-            items: 4,
+            breakpoint: { max: 1200, min: 800 },
+            items: 3,
             slidesToSlide: 1,
-            // partialVisibilityGutter: 30
+            partialVisibilityGutter: 30
+        },
+        tablet: {
+            breakpoint: { max: 800, min: 600 },
+            items: 2,
+            slidesToSlide: 1,
+            partialVisibilityGutter: 30
         },
         mobile: {
             breakpoint: { max: 600, min: 0 },
-            items: 3,
+            items: 2,
             slidesToSlide: 1,
-            // partialVisibilityGutter: 0
+            partialVisibilityGutter: 50
         }
     }
 
 
     return (
         <div className='carusel'>
-            <Carousel className='test'
+            <Carousel 
                 partialVisible={true}
                 swipeable={true}
                 draggable={true}

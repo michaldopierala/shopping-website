@@ -36,11 +36,11 @@ export default function HomeCarusel() {
                 responsive={responsive}
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
-                autoPlay={true}
+                autoPlay={false}
                 autoPlaySpeed={5000}
                 keyBoardControl={true}
-                customTransition="all .5"
-                transitionDuration={500}
+                customTransition="all .9"
+                transitionDuration={900}
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["tablet", "mobile"]}
                 //    deviceType={this.props.deviceType}
@@ -49,11 +49,17 @@ export default function HomeCarusel() {
             >
                 {/* {products.map( (item,index)=>  <img key={index} src={item.imgUrl[0]} /> )} */}
 
-            
-              <div className='container'> <img src="../img/pinaple1.jpg" />  <a className='text' href="https://www.w3schools.com" >Find out more </a></div>
-              <div className='container'> <img src="../img/pexel1.jpg" /> <a className='text' href="https://www.w3schools.com" >Find out more </a></div>
-               
-                
+
+                <div className='container'>
+                     <img className='backGroundImg' src="../img/pinaple1.jpg" />
+                    <img className='text' src="../img/slider_text.png" />
+                </div>
+                <div className='container'> 
+                <img className='backGroundImg' src="../img/pexel1.jpg" /> 
+                <a className='text' href="https://www.w3schools.com" >Find out more </a>
+                </div>
+
+
                 {/* <div className='item'>Item 1</div>
                 <div className='item'>Item 2</div>
                 <div className='item'>Item 3</div>

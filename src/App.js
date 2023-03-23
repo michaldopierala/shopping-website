@@ -10,6 +10,8 @@ import PaymentSucces from './page/PaymentSucces';
 import CartContext from './context/CartContext';
 import Footer from './component/Footer';
 import Main from './page/Main';
+import NotFound from './page/NotFound';
+import Url from './component/Url';
 
 function App() {
   return (
@@ -23,8 +25,11 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/product/:id" element={<Product />} />
               <Route path="/success" element={<PaymentSucces />} />
+              {/* <Route path="*" element={<NotFound />} /> */}
+              {/* <Route path="*" element={<Url/>} /> */}
             </Route>
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/url/:extension" element={<Url/>} />
           </Routes>
           <Footer />
         </CartContext>
