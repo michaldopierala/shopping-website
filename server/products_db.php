@@ -6,9 +6,7 @@ header("Access-Control-Allow-Headers: *");
 
 require 'connection.php';
  //conect to database
- 
- 
- 
+
   $connection = mysqli_connect($servername,$username,$password );
   $db = mysqli_select_db($connection,$dbname);
 
@@ -21,14 +19,5 @@ require 'connection.php';
       array_push($products_list,$row);
     }
     
-    
-    // var_dump($products_list); 
-
-
-
-    // $products_list = json_encode($products_list);
-    
-    // echo $products_list ; 
-
-
+    // $products_list - this variable which is accesable for other files  
 ?>

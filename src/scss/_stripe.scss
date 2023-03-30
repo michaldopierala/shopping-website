@@ -1,47 +1,38 @@
 #root {
-    display: flex;
-    align-items: center;
-  }
-  
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    height: 100vh;
-    width: 100vw;
- 
-  }
+  display: flex;
+  align-items: center;
+}
 
-  .paymentContainer{
-    // outline: red solid 1px;
-    padding: 25px;
-    border-radius: 10px;
-            box-shadow: 0px 0px 0px 0.5px rgba(50, 50, 93, 0.1),
-          0px 2px 5px 0px rgba(50, 50, 93, 0.1), 0px 1px 1.5px 0px rgba(0, 0, 0, 0.07);
-          background-color:#ffffff;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  width: 100vw;
+}
 
-    form {
-      background-color: #ffffff;
-      // padding: 25px;
-      border-radius: 10px;
-      // width: 100%;
-      min-width: 500px;
-      align-self: center;
-        // box-shadow: 0px 0px 0px 0.5px rgba(50, 50, 93, 0.1),
-        //   0px 2px 5px 0px rgba(50, 50, 93, 0.1), 0px 1px 1.5px 0px rgba(0, 0, 0, 0.07);
-      border-radius: 7px;
-      // padding: 40px;
+form {
+  // width: 30vw;
+  // min-width: 500px;
+  align-self: center;
+  // box-shadow: 0px 0px 0px 0.5px rgba(50, 50, 93, 0.1),
+    // 0px 2px 5px 0px rgba(50, 50, 93, 0.1), 0px 1px 1.5px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 7px;
+  // padding: 40px;
+}
 
-      .Input{
-        padding: 260px !important;
-        background-color: red !important;
-      }
-    }
-  }
-  
+
+
+
+
+
+
+
+
+
 
   
   
@@ -59,7 +50,7 @@
   
   /* Buttons and links */
   button {
-    background: rgb(40, 40, 138);
+    background: rgb(50, 139, 227);
     font-family: Arial, sans-serif;
     color: #ffffff;
     border-radius: 4px;
@@ -74,7 +65,7 @@
     box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
     width: 50%;
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 50px;
   }
   
   button:hover {

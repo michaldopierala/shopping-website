@@ -30,10 +30,6 @@ body {
     letter-spacing: 0.007em;
 }
 
-
-
-
-
 .Navbar {
     z-index: 100;
     position: fixed;
@@ -122,7 +118,7 @@ body {
             position: relative;
             width: 100%;
             height: 500px;
-            
+
 
             .backGroundImg {
                 width: 100%;
@@ -140,12 +136,12 @@ body {
         }
 
         .react-multi-carousel-dot {
-            padding-bottom: 40px;
+            padding-bottom: 20px;
 
             button {
                 padding: 7px;
                 background: rgba(white, 0.2);
-                border: solid rgba(rgb(104, 103, 103), 0.2) 2px;
+                border: solid rgba(white, 0.5) 2px;
             }
         }
 
@@ -178,12 +174,16 @@ body {
         .carusel {
 
             .productContainer {
-                padding: 10px;
+                margin: 0 auto;
+                text-align: center;
+                padding: 4px;
+                padding-right: 3.9vw;
                 letter-spacing: 1.3px;
 
                 .product {
+                    overflow: hidden;
                     box-shadow: 0px 0px 5px 2px rgba(120, 120, 120, 0.3);
-                    width: 80%;
+                    // width: 80%;
                     letter-spacing: 1;
 
                     .name {
@@ -207,7 +207,10 @@ body {
                         width: 100%;
                     }
 
-                    &:hover {
+
+
+
+                    &:hover img {
                         cursor: pointer;
                         -webkit-transform: scale(1.03);
                         transform: scale(1.03);
@@ -260,7 +263,7 @@ body {
         all: unset;
         position: absolute;
         top: 9px;
-        right: 35px;
+        right: 50px;
 
         &:hover {
             cursor: pointer;
@@ -272,18 +275,21 @@ body {
     }
 
     .tab {
-        // to jest cart 2
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         height: 100vh;
-        padding: 15px 30px;
+        padding: 0px 30px;
         background-color: white;
         font-size: 20px;
         min-width: 400px;
-        // min-width: auto;
-        // width: 80%;
 
+        .title {
+            margin-top: 22px;
+            margin-bottom: 40px;
+            font-weight: 400;
+            font-size: 24px;
+        }
 
         animation: wobble 0.5s 1;
 
@@ -295,12 +301,6 @@ body {
             to {
                 right: 0;
             }
-        }
-
-        .total {
-            text-align: right;
-            margin-top: 30px;
-            font-weight: 400;
         }
 
 
@@ -349,7 +349,6 @@ body {
                 }
 
                 button {
-
                     clear: all;
                     padding: 0;
                     margin: 0;
@@ -380,18 +379,41 @@ body {
             margin-top: 30vh;
         }
 
-        .checkoutContainer {
-            margin-top: 100px;
-            text-align: center;
+        .totalContainer {
+            border-top: 2px solid rgb(229, 229, 229);
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            padding: 20px 40px;
+            background-color: rgb(249, 249, 249);
+
+            .total {
+                text-align: right;
+                font-weight: 400;
+            }
+
+            .checkoutContainer {
+                margin-top: 50px;
+                margin-bottom: 60px;
+                text-align: center;
+
+                .checkout {
+                    font-size: 16px;
+                    padding: 15px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    letter-spacing: 2px;
+                }
+            }
+
         }
 
-        .checkout {
-            font-size: 16px;
-            padding: 15px;
-            padding-left: 100px;
-            padding-right: 100px;
-            letter-spacing: 2px;
-        }
+
+
+
+
+
 
     }
 
@@ -400,7 +422,6 @@ body {
 
 }
 
-
 .Store {
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
@@ -408,9 +429,50 @@ body {
     justify-content: space-around;
     padding: 70px;
     padding-top: 170px;
-
 }
 
+.ProductAddedModal {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(120, 120, 120, 0.7);
+
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        border-radius: 10px;
+        width: 400px;
+        // height: 200px;
+        background-color: white;
+
+        .text {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+
+            button {
+                margin: 0px 20px;
+                padding: 10px 30px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+}
 
 .Product {
     letter-spacing: 0.06rem;
@@ -438,18 +500,18 @@ body {
             }
 
             .react-multi-carousel-dot {
-                padding-bottom: 40px;
+                padding-bottom: 30px;
 
                 button {
                     padding: 7px;
-                    background: rgba(white, 0.2);
-                    border: solid rgba(rgb(104, 103, 103), 0.2) 2px;
+                    background: rgba(white, 0.1);
+                    border: solid rgba(230, 230, 230, 0.4) 2px;
                 }
             }
 
             .react-multi-carousel-dot--active button {
                 background: rgba(white, 0.5);
-                border: solid rgba(white, 0.2) 2px;
+                border: solid rgba(white, 0.3) 2px;
 
             }
 
@@ -495,11 +557,11 @@ body {
 
             .price {
                 margin-top: 15px;
-                font-size: 25px;
+                font-size: 23px;
                 font-weight: 400;
                 border-bottom: gray solid 1px;
                 padding-bottom: 20px;
-                color: rgb(110, 110, 110);
+                color: rgb(80, 80, 80);
             }
 
             .changeQuantity {
@@ -586,7 +648,8 @@ body {
 
     .otherProductsCarusel {
         margin: 0 auto;
-        margin-top: 100px;
+        margin-top: 50px;
+        margin-bottom: 90px;
         width: 90%;
 
         .head {
@@ -669,6 +732,10 @@ body {
         }
     }
 
+    .ShowSummary {
+        display: none;
+    }
+
 
 
     .columnContainer {
@@ -677,27 +744,37 @@ body {
         background-color: rgb(250, 250, 250);
 
         .column1 {
-            padding: 20px 50px;
-            padding-bottom: 300px;
-
-            // box-shadow: 0px 0px 5px rgb(220, 220, 220);
             border-radius: 10px;
+            margin: 6vw;
+            margin-bottom: 150px;
+            // outline: auto;
 
 
             .head {
-                // text-align: center;
                 margin: 20px 0px;
                 font-size: 18px;
                 text-transform: uppercase;
                 font-weight: 400;
             }
 
+            form {
+                // outline: auto;
+
+                // padding: 30px;   
+            }
+
             .address {
-                padding: 25px;
-                border-radius: 10px;
-                margin-bottom: 50px;
-                background-color: white;
-                box-shadow: 0px 0px 3px rgb(220, 220, 220);
+                // outline: auto;
+                // padding: 25px;
+                // border-radius: 10px;
+                // margin-bottom: 50px;
+                // background-color: white;
+                // box-shadow: 0px 0px 3px rgb(220, 220, 220);
+
+                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+                font-size: 15px;
+                -webkit-font-smoothing: antialiased;
+                letter-spacing: 0.1px;
 
                 form {
                     display: grid;
@@ -710,16 +787,21 @@ body {
                     }
 
                     label {
-                        margin: 5px;
+                        // font-size: 14px;
+                        // font-weight: 300;
+                        // margin: 5px;
                         // margin: 10px;
+                        color: rgb(20, 20, 20);
 
                         input {
                             box-sizing: border-box;
                             width: 100%;
-                            padding: 10px;
-                            margin-top: 5px;
-                            border: 1px solid rgb(210, 210, 210);
+                            padding: 12px;
+                            margin-top: 2px;
+                            margin-bottom: 5px;
+                            border: 1px solid rgb(210, 220, 220);
                             border-radius: 5px;
+                            font-size: 16px;
                         }
                     }
                 }
@@ -779,10 +861,6 @@ body {
             }
 
 
-            .Stripe {
-                @import 'stripe';
-
-            }
         }
 
 
@@ -807,22 +885,24 @@ body {
                 // justify-content: space-between;
                 margin-top: 15px;
 
-                .product{
+                .product {
                     margin-right: 40px;
                     font-size: 20px;
+
                     // font-weight: 400;
-                    .quantity{
+                    .quantity {
                         color: #888888;
                         font-size: 15px;
                     }
-                    .productPrice{
+
+                    .productPrice {
                         color: #888888;
                         font-size: 15px;
 
                     }
                 }
 
-                .productTotal{
+                .productTotal {
                     font-size: 20px;
                 }
 
@@ -872,5 +952,9 @@ body {
 
 
 
+
+.Stripe {
+    @import 'stripe';
+}
 
 @import 'mobile';

@@ -1,6 +1,8 @@
 import React, { useState, createContext } from 'react'
 import ShoppingCart from '../component/ShoppingCart'
+// import ProductAddedModal from '../component/ProductAddedModal'
 import useLocalStorage from '../hooks/useLocalStorage'
+import ProductAddedModal from '../component/ProductAddedModal'
 
 
 
@@ -15,11 +17,13 @@ export default function CartContext({ children }) {
 
 
     const [cartOpen, setCartOpen] = useState(false)
+    const [newProduct, setNewProduct] = useState(false)
 
     const CartQuantity = cartItems.reduce((total, currentValue) => currentValue.quantity + total, 0)
 
 
     function closeCart() {
+        setNewProduct(false)
         cartOpen ? setCartOpen(false) : setCartOpen(true)
     }
 
@@ -27,6 +31,7 @@ export default function CartContext({ children }) {
     function increaseCartQuantity(id) {
         setCartItems((currentCart) => {
             if (currentCart.find((item) => item.id === id) == null) {
+                newProduct ? setNewProduct(false) : setNewProduct(true)
                 return [...currentCart, { id: id, quantity: 1 }]
             } else {
                 return currentCart.map(item => {
@@ -74,10 +79,13 @@ export default function CartContext({ children }) {
                 CartQuantity,
                 cartOpen,
                 setCartOpen,
+                newProduct,
+                setNewProduct,
                 cartItems
             }}>
             {children}
             <ShoppingCart cartOpen={cartOpen} />
+            <ProductAddedModal />
         </ShoppingCartContext.Provider>
 
     )

@@ -16,15 +16,15 @@ export default function ProductsCarusel() {
             slidesToSlide: 1,
             partialVisibilityGutter: 30,
         },
+        // tablet: {
+        //     breakpoint: { max: 1200, min: 1000 },
+        //     items: 3,
+        //     slidesToSlide: 1,
+        //     partialVisibilityGutter: 30
+        // },
         tablet: {
-            breakpoint: { max: 1200, min: 800 },
+            breakpoint: { max: 1200, min: 600 },
             items: 3,
-            slidesToSlide: 1,
-            partialVisibilityGutter: 30
-        },
-        tablet: {
-            breakpoint: { max: 800, min: 600 },
-            items: 2,
             slidesToSlide: 1,
             partialVisibilityGutter: 30
         },
@@ -48,7 +48,7 @@ export default function ProductsCarusel() {
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
                 keyBoardControl={true}
-                customTransition="transform 300ms ease-in-out"
+                customTransition="transform 100ms ease-in-out"
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["mobile"]}
                 dotListClass="custom-dot-list-style"

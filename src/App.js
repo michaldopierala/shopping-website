@@ -11,7 +11,6 @@ import CartContext from './context/CartContext';
 import Footer from './component/Footer';
 import Main from './page/Main';
 import NotFound from './page/NotFound';
-import Url from './component/Url';
 
 function App() {
   return (
@@ -29,7 +28,6 @@ function App() {
               {/* <Route path="*" element={<Url/>} /> */}
             </Route>
             <Route path="/checkout" element={<Checkout />} />
-            <Route path="/url/:extension" element={<Url/>} />
           </Routes>
           <Footer />
         </CartContext>

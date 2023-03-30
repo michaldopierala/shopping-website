@@ -39,6 +39,7 @@ export default function Slider({ id, name, imgUrl }) {
             ssr={true} // means to render carousel on server-side.
             infinite={true}
             keyBoardControl={true}
+            customTransition="transform 200ms ease-in-out"
             removeArrowOnDeviceType={["mobile"]}
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"

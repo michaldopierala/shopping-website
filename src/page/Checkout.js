@@ -3,6 +3,7 @@ import { ShoppingCartContext } from '../context/CartContext'
 import CheckoutComponent from '../component/checkout/CheckoutComponent';
 import ProductCheckout from '../component/checkout/ProductCheckout';
 import Address from '../component/checkout/Address';
+import ShowSummary from '../component/ShowSummary';
 // import Product2 from '../component/checkout/Product2';
 
 
@@ -11,8 +12,17 @@ import Address from '../component/checkout/Address';
 export default function Checkout() {
   const { setCartOpen, CartQuantity, cartItems } = useContext(ShoppingCartContext)
 
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
   const [total, setTotal] = useState(0);
+  const [address, setAddress] = useState([]);
+
+  const updateAddress = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setAddress(values => ({...values, [name]: value}))
+    localStorage.setItem("adress", JSON.stringify(address));
+    console.log(address)
+  }
 
 
   useEffect(() => {
@@ -25,10 +35,11 @@ export default function Checkout() {
       <div className='header'>
         <img className='logo' src='../img/logo.png' alt='logo' />
       </div>
+      <ShowSummary total={total}/>
       <div className='columnContainer'>
         <div className='column1'>
           <div className='head'> Adreas </div>
-          <Address />
+          <Address updateAddress={updateAddress} address={address} />
           <div className='head'> Payment </div>
           <div>
             {total == 0
@@ -36,7 +47,7 @@ export default function Checkout() {
                 <svg><circle cx="70" cy="70" r="70"> </circle> </svg>
               </div>
             }
-            <CheckoutComponent changeTotal={total => setTotal(total)} />
+            <CheckoutComponent changeTotal={total => setTotal(total)} intent={intent=> setAddress(values => ({...values, 'intent': intent}))} />
           </div>
         </div>
         <div className='column2'>

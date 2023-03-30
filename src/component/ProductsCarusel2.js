@@ -42,7 +42,7 @@ export default function ProductsCarusel2() {
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
                 keyBoardControl={true}
-                customTransition="transform 300ms ease-in-out"
+                customTransition="transform 200ms ease-in-out"
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["mobile"]}
                 dotListClass="custom-dot-list-style"

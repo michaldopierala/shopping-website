@@ -2,15 +2,15 @@ import React, { useState } from 'react'
 
 
 
-export default function Address() {
+export default function Address({updateAddress, address}) {
 
-    const [address, setAddress] = useState({});
+    // const [address, setAddress] = useState({});
 
-    const handleChange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        setAddress(values => ({ ...values, [name]: value }))
-    }
+    // const handleChange = (event) => {
+    //     const name = event.target.name;
+    //     const value = event.target.value;
+    //     setAddress(values => ({ ...values, [name]: value }))
+    // }
 
     // const handleSubmit = (event) => {
     //     event.preventDefault();
@@ -26,14 +26,14 @@ export default function Address() {
                         type="text"
                         name="name"
                         value={address.name || ""}
-                        onChange={handleChange} />
+                        onChange={updateAddress} />
                 </label>
                 <label>Surname
                     <input
                         type="text"
                         name="surname"
                         value={address.surname || ""}
-                        onChange={handleChange} />
+                        onChange={updateAddress} />
                 </label>
                 <label className='item3'>
                     <div>Address</div>
@@ -41,21 +41,21 @@ export default function Address() {
                         type="text"
                         name="address"
                         value={address.address || ""}
-                        onChange={handleChange} />
+                        onChange={updateAddress} />
                 </label>
                 <label>City
                     <input
                         type="text"
                         name="city"
                         value={address.city || ""}
-                        onChange={handleChange} />
+                        onChange={updateAddress} />
                 </label>
                 <label >Postal Code
                     <input
                         type="text"
                         name="postal"
                         value={address.postal || ""}
-                        onChange={handleChange} />
+                        onChange={updateAddress} />
                 </label>
             </form>
         </div>

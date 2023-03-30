@@ -40,7 +40,7 @@
     {
         "id": 4,
         "name": "Icecream",
-        "price": 4.99,
+        "price": 4.00,
         "imgUrl": [
             "../img/product/id4/1.jpeg",
             "../img/product/id4/2.jpeg",

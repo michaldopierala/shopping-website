@@ -34,22 +34,34 @@
   }
 
   @media only screen and (max-width: 600px) {
+    .ProductsCarusel {
+      border-top: none;
+      margin-top: 70px;
+    }
+
     .homeCarusel {
       .container {
-        height: 250px;
+        height: 180px;
 
         .backGroundImg {
           object-position: 75% 50%;
         }
 
         .text {
-          bottom: 40%;
-          left: 5%;
-          width: 60vw;
+          bottom: 35%;
+          left: 7%;
+          width: 55vw;
         }
 
       }
+
+      .react-multi-carousel-dot {
+        button {
+          padding: 5px;
+        }
+      }
     }
+
   }
 
 }
@@ -115,6 +127,8 @@
   }
 
   .Home {
+
+
 
     .ProductsCarusel {
       width: 100%;
@@ -191,21 +205,23 @@
     }
   }
 
-
-
   .ShoppingCart {
     font-size: 20px;
 
+    .close_btn {
+      top: 12px;
+      right: 45px;
+    }
 
     .tab {
       font-size: 20px;
-
       min-width: auto;
-
       width: 80vw;
       padding: 18px 20px;
 
-
+      .title {
+        margin-top: 7px;
+      }
 
       .CartItem {
         font-size: 20px;
@@ -222,28 +238,67 @@
         }
 
         img {
-
           width: 85px;
           height: 85px;
         }
+      }
+
+
+      .totalContainer {
+        padding-bottom: 90px;
       }
     }
 
   }
 
+  .Store {
+    padding-top: 110px;
 
+    .StoreItem {
+      margin-bottom: 35px;
+
+      .addProduct button {
+        display: block;
+      }
+    }
+  }
+
+  .ProductAddedModal {
+    .container {
+      width: 60%;
+
+      .text {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        font-size: 15px;
+      }
+
+      .btn {
+        button {
+          margin: 0px 10px;
+          padding: 5px 20px;
+        }
+      }
+    }
+  }
 
   .Product {
 
     .slider_and_description {
       display: block;
+      padding: 30px;
+      padding-top: 100px;
+
 
       .sliderContainer {
+
 
         .slider {
           position: relative;
           float: none;
           margin: 0 auto;
+          width: 100%;
+
 
           .counter {
 
@@ -279,10 +334,12 @@
           }
         }
 
+
+
       }
 
-      .description {
-        padding: 40px 16%;
+      .descriptionColumn {
+        padding: 40px 0px;
       }
 
 
@@ -293,5 +350,97 @@
     }
 
 
+  }
+
+
+  .Checkout {
+    .columnContainer {
+      grid-template-columns: 1fr;
+      background-color: white;
+
+      .column1 {
+        padding: 0;
+
+        .head {
+          margin: 20px 31px;
+        }
+
+        form {
+          outline: none;
+          padding: 10px 25px;
+        }
+      }
+
+      .column2 {
+        display: none;
+      }
+    }
+
+    .ShowSummary {
+      display: block;
+      width: 100vw;
+      margin-top: 50px;
+
+      button {
+        // outline: auto;
+        // all: unset;
+        // display: block;
+        color: black;
+        padding: 20px 55px;
+        background-color: rgb(246, 246, 246);
+        font-size: 12px;
+        font-weight: 400;
+        text-align: left;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        width: 100%;
+        box-shadow: 0px 0px 0px 0.5px rgba(50, 50, 93, 0.1),
+          0px 2px 5px 0px rgba(50, 50, 93, 0.1), 0px 1px 1.5px 0px rgba(0, 0, 0, 0.07);
+
+        spam {
+          // outline: auto;
+        }
+
+        .show {
+          display: flex;
+          // justify-content: space-between;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .arrow {
+        width: 13px;
+        margin-left: 7px;
+      }
+
+      .trolley {
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+      }
+
+      .summaryContent {
+        background-color: rgb(240, 240, 240);
+        padding: 20px 60px;
+        font-size: 15px;
+        font-weight: 300;
+
+        .ProductComponent {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+        }
+
+        .total {
+          padding: 15px 0px;
+          border-top: rgb(150, 150, 150) 1px solid;
+          text-align: right;
+          font-weight: 400;
+        }
+      }
+    }
   }
 }
