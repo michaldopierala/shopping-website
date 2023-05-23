@@ -5,9 +5,6 @@ import { ShoppingCartContext } from '../context/CartContext'
 export default function ProductAddedModal() {
   const { newProduct, setNewProduct, closeCart } = useContext(ShoppingCartContext)
 
-  console.log('hello world - this info is from Product added modal ')
-  console.log(newProduct)
-
   if (!newProduct) return null
 
   return (

@@ -46,6 +46,5 @@ export default function Slider({ id, name, imgUrl }) {
         >
             {imgUrl.map((item, index) => <img key={index} src={imgUrl[index]} />)}
         </Carousel>
-
     )
 }

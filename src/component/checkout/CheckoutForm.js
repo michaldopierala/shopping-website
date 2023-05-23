@@ -5,6 +5,9 @@ import {
     useStripe,
     useElements
 } from "@stripe/react-stripe-js";
+// import axios, {isCancel, AxiosError} from 'axios';
+import axios from 'axios';
+
 
 
 
@@ -58,7 +61,29 @@ export default function CheckoutForm() {
             return;
         }
 
+
+
         setIsLoading(true);
+
+        // HERE I PUT AXIOS AND SEND CUSTOMER TO DATA BASE 
+        // axios({
+        //     method: 'post',
+        //     url: 'https://sweetdream.ink/server/customer.php',
+        //     input: localStorage.getItem("adress")
+        //   })
+        axios.post('https://sweetdream.ink/server/customer.php', localStorage.getItem("adress"))
+            .then(res => console.log(res.data))
+        localStorage.removeItem("cart");
+        console.log(localStorage.getItem("adress"))
+
+        // );
+
+
+
+
+
+
+
 
         const { error } = await stripe.confirmPayment({
             elements,
@@ -86,7 +111,7 @@ export default function CheckoutForm() {
         layout: "tabs",
     }
 
-  
+
 
     return (
         <div className="paymentContainer">

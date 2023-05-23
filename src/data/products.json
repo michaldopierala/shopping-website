@@ -39,8 +39,8 @@
     },
     {
         "id": 4,
-        "name": "Icecream",
-        "price": 4.00,
+        "name": "Icecreamxx",
+        "price": 40,
         "imgUrl": [
             "../img/product/id4/1.jpeg",
             "../img/product/id4/2.jpeg",
@@ -53,7 +53,7 @@
     {
         "id": 5,
         "name": "Lemons",
-        "price": 10.99,
+        "price": 100.99,
         "imgUrl": [
             "../img/product/id5/1.jpeg",
             "../img/product/id5/2.jpeg",

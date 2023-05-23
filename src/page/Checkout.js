@@ -21,7 +21,7 @@ export default function Checkout() {
     const value = event.target.value;
     setAddress(values => ({...values, [name]: value}))
     localStorage.setItem("adress", JSON.stringify(address));
-    console.log(address)
+    // console.log(address)
   }
 
 

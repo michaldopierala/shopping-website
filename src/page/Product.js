@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { BrowserRouter, Link, Routes, Route, useParams } from "react-router-dom";
 import Slider from '../component/imageSlider/Slider'
+import Slider2 from '../component/imageSlider/Slider2'
 import ImgButtons from '../component/imageSlider/ImgButtons';
 import { ShoppingCartContext } from '../context/CartContext';
 import products from '../data/products.json'
